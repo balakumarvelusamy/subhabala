@@ -8,7 +8,7 @@ const Hero5 = (props) => {
             <div className="wedding-announcement">
                 <div className="couple-text">
                     <h2>Margrate & Daniel</h2>
-                    <p >We Are Getting Married Dec 8, 2022</p>
+                    <p >WE ARE GETTING MARRIED JUNE 5, 2023</p>
                     <div className="wpo-wedding-date">
                         <div className="clock-grids">
                             <TimeCountDown/>
