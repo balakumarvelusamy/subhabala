@@ -17,7 +17,7 @@ const Hero7 = (props) => {
                     <div className="wedding-announcement">
                         <div className="couple-text">
                             <h2>Margrate & Daniel</h2>
-                            <p >We Are Getting Married Dec 8, 2022</p>
+                            <p >WE ARE GETTING MARRIED JUNE 5, 2023</p>
                         </div>
                     </div>
                 </div>
