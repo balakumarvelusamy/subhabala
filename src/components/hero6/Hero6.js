@@ -9,7 +9,7 @@ const Hero6 = (props) => {
         <section className="wpo-hero-style-4">
             <div className="wedding-announcement">
                 <div className="couple-text">
-                    <h2>Margrate & Daniel</h2>
+                    <h2>Bala & Subha</h2>
                     <p >WE ARE GETTING MARRIED JUNE 5, 2023</p>
                     <div className="wpo-wedding-date">
                         <div className="clock-grids">
