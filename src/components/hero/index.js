@@ -7,8 +7,8 @@ import shape3 from "../../images/slider/flower2.png";
 
 const Hero = (props) => {
   return (
-    <section className="static-hero" id="home">
-      <div className="hero-container">
+    <section className="static-hero " id="home">
+      <div className="hero-container ">
         <div className="hero-inner">
           <div className="container-fluid">
             <div className="row align-items-center">
@@ -42,10 +42,10 @@ const Hero = (props) => {
           <div className="static-hero-img-inner">
             <img src={hImg1} alt="" />
           </div>
-          <div className="static-hero-shape-1">
+          <div className="static-hero-shape-1 d-none">
             <img src={shape2} alt="" />
           </div>
-          <div className="static-hero-shape-2">
+          <div className="static-hero-shape-2 d-none">
             <img src={shape3} alt="" />
           </div>
         </div>
