@@ -14,10 +14,10 @@ const Hero4 = (props) => {
                             <div className="col-lg-6">
                                 <div className="wpo-event-item">
                                     <div className="wpo-event-text">
-                                        <h2>Alexander & Jenny</h2>
-                                        <p>We Are Getting Married Nov 22,2022</p>
+                                        <h2>Bala & Subha</h2>
+                                        <p>We Are Getting Married June 5,2023</p>
                                         <ul>
-                                            <li>Monday, 25 Sep, 2022 <br/>
+                                            <li>Monday, 5 June, 2023 <br/>
                                                 1:00 PM – 4:30 PM</li>
                                             <li>Estern Star Plaza, Road 123, USA</li>
                                             <li><LocationMap /></li>

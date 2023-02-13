@@ -15,7 +15,7 @@ const Hero2 = (props) => {
                                 <div className="wpo-static-hero-inner">
                                     <div className="shape-1"><img src={shape1} alt="" /></div>
                                     <div data-swiper-parallax="300" className="slide-title">
-                                        <h2>Margrate <span>&</span> Daniel</h2>
+                                        <h2>Bala <span>&</span> Subha</h2>
                                     </div>
                                     <div data-swiper-parallax="400" className="slide-text">
                                         <p>WE ARE GETTING MARRIED JUNE 5, 2023</p>
