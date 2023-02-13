@@ -27,7 +27,7 @@ const Header = (props) => {
                       <i className="fi flaticon-dove"></i>
                     </span>
                     <br />
-                    <p className="wpo-about-content-inner p-1 m-1">TalesofSuBa</p>
+                    <p className="wpo-about-content-inner p-1 m-1 d-none">TalesofSuBa</p>
                   </NavLink>
                 </div>
               </div>
