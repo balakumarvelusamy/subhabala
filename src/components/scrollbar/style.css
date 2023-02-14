@@ -13,11 +13,11 @@ ul.smothscroll a {
     display: block;
     text-align: center;
     color: #fff;
-    background-color: rgba(214, 99, 113, 0.7);
-    border: 2px solid #D66371;
+    background-color: rgba(99, 214, 114, 0.7);
+    border: 2px solid #4bb878;
 }
 ul.smothscroll a:hover {
-    background-color: #D66371;
+    background-color: #4bb878;
     color: #fff;
 }
 
