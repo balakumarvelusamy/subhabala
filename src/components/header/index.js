@@ -1,9 +1,8 @@
 import React from "react";
-import { Link } from "react-scroll";
-import { NavLink } from "react-router-dom";
-import MobileMenu from "../MobileMenu/MobileMenu";
+import { Link } from "react-router-dom";
+import MobileMenu2 from "../MobileMenu2/MobileMenu2";
 
-const Header = (props) => {
+const Header2 = (props) => {
   const ClickHandler = () => {
     window.scrollTo(10, 0);
   };
@@ -16,12 +15,12 @@ const Header = (props) => {
             <div className="row align-items-center">
               <div className="col-lg-3 col-md-3 col-3 d-lg-none dl-block">
                 <div className="mobail-menu">
-                  <MobileMenu />
+                  <MobileMenu2 />
                 </div>
               </div>
               <div className="col-lg-2 col-md-6 col-6">
                 <div className="navbar-header">
-                  <NavLink className="navbar-brand logo" to="/">
+                  <Link className="navbar-brand logo" to="/">
                     <small>SuBa</small>
                     Kalyanam
                     <span>
@@ -29,7 +28,7 @@ const Header = (props) => {
                     </span>
                     <br />
                     <p className="wpo-about-content-inner p-1 m-1 d-none">TalesofSuBa</p>
-                  </NavLink>
+                  </Link>
                 </div>
               </div>
               <div className="col-lg-8 col-md-1 col-1">
@@ -39,132 +38,201 @@ const Header = (props) => {
                   </button>
                   <ul className="nav navbar-nav mb-2 mb-lg-0">
                     <li className="menu-item-has-children">
-                      <Link activeClass="active" to="home" spy={true} smooth={true} duration={500}>
-                        Home
+                      <Link to="/home">Home</Link>
+                      <ul className="sub-menu d-none">
+                        <li>
+                          <Link onClick={ClickHandler} to="/home">
+                            Home style 1
+                          </Link>
+                        </li>
+                        <li>
+                          <Link onClick={ClickHandler} to="/home2">
+                            Home style 2
+                          </Link>
+                        </li>
+                        <li>
+                          <Link onClick={ClickHandler} to="/home3">
+                            Home style 3
+                          </Link>
+                        </li>
+                        <li>
+                          <Link onClick={ClickHandler} to="/home4">
+                            Home Static Hero
+                          </Link>
+                        </li>
+                        <li>
+                          <Link onClick={ClickHandler} to="/home5">
+                            Home Box Style
+                          </Link>
+                        </li>
+                        <li>
+                          <Link onClick={ClickHandler} to="/home6">
+                            Home particles Effect
+                          </Link>
+                        </li>
+                        <li>
+                          <Link onClick={ClickHandler} to="/home7">
+                            Home Video Banar
+                          </Link>
+                        </li>
+                        <li>
+                          <Link onClick={ClickHandler} to="/invitation">
+                            Invitation
+                          </Link>
+                        </li>
+                      </ul>
+                    </li>
+                    {/* <li>
+                      <Link onClick={ClickHandler} to="/about">
+                        About
+                      </Link>
+                    </li>
+                    <li className="menu-item-has-children">
+                      <Link onClick={ClickHandler} to="/wedding">
+                        Wedding
                       </Link>
                       <ul className="sub-menu">
                         <li>
-                          <NavLink onClick={ClickHandler} to="/home">
-                            Home style 1
-                          </NavLink>
+                          <Link onClick={ClickHandler} to="/wedding">
+                            Wedding
+                          </Link>
                         </li>
                         <li>
-                          <NavLink onClick={ClickHandler} to="/home2">
-                            Home style 2
-                          </NavLink>
+                          <Link onClick={ClickHandler} to="/wedding-details">
+                            Wedding Details
+                          </Link>
+                        </li>
+                      </ul>
+                    </li>
+                    <li className="menu-item-has-children">
+                      <Link onClick={ClickHandler} to="/gallery">
+                        Gallery
+                      </Link>
+                      <ul className="sub-menu">
+                        <li>
+                          <Link onClick={ClickHandler} to="/gallery">
+                            Gallery Style 1
+                          </Link>
                         </li>
                         <li>
-                          <NavLink onClick={ClickHandler} to="/home3">
-                            Home style 3
-                          </NavLink>
+                          <Link onClick={ClickHandler} to="/gallery-s2">
+                            Gallery Style 2
+                          </Link>
                         </li>
                         <li>
-                          <NavLink onClick={ClickHandler} to="/home4">
-                            Home Static Hero
-                          </NavLink>
-                        </li>
-                        <li>
-                          <NavLink onClick={ClickHandler} to="/home5">
-                            Home Box Style
-                          </NavLink>
-                        </li>
-                        <li>
-                          <NavLink onClick={ClickHandler} to="/home6">
-                            Home particles Effect
-                          </NavLink>
-                        </li>
-                        <li>
-                          <NavLink onClick={ClickHandler} to="/home7">
-                            Home Video Banar
-                          </NavLink>
-                        </li>
-                        <li>
-                          <NavLink onClick={ClickHandler} to="/invitation">
-                            Invitation
-                          </NavLink>
+                          <Link onClick={ClickHandler} to="/gallery-slide">
+                            Gallery Slide
+                          </Link>
                         </li>
                       </ul>
                     </li>
                     <li>
-                      <Link activeClass="active" to="couple" spy={true} smooth={true} duration={500}>
-                        Couple
-                      </Link>
-                    </li>
-                    <li>
-                      <Link activeClass="active" to="story" spy={true} smooth={true} duration={500}>
-                        Story
-                      </Link>
-                    </li>
-                    <li>
-                      <Link activeClass="active" to="gallery" spy={true} smooth={true} duration={500}>
-                        Gallery
-                      </Link>
-                    </li>
-                    <li>
-                      <Link activeClass="active" to="RSVP" spy={true} smooth={true} duration={500}>
+                      <Link onClick={ClickHandler} to="/rsvp">
                         RSVP
                       </Link>
                     </li>
-                    <li>
-                      <Link activeClass="active" to="event" spy={true} smooth={true} duration={500}>
-                        Events
+                    <li className="menu-item-has-children">
+                      <Link onClick={ClickHandler} to="/story">
+                        pages
                       </Link>
-                    </li>
-                    <li className="menu-item-has-children d-none">
-                      <NavLink onClick={ClickHandler} to="/blog">
-                        Blog
-                      </NavLink>
                       <ul className="sub-menu">
                         <li>
-                          <NavLink onClick={ClickHandler} to="/blog">
+                          <Link onClick={ClickHandler} to="/story">
+                            Our story
+                          </Link>
+                        </li>
+                        <li>
+                          <Link onClick={ClickHandler} to="/accomodation">
+                            Accomodation
+                          </Link>
+                        </li>
+                        <li>
+                          <Link onClick={ClickHandler} to="/event">
+                            When & Where
+                          </Link>
+                        </li>
+                        <li>
+                          <Link onClick={ClickHandler} to="/groom-bride">
+                            Bridesmaid & Groomsman
+                          </Link>
+                        </li>
+                        <li>
+                          <Link onClick={ClickHandler} to="/coming">
+                            Coming Soon
+                          </Link>
+                        </li>
+                        <li>
+                          <Link onClick={ClickHandler} to="/404">
+                            404 Error
+                          </Link>
+                        </li>
+                        <li>
+                          <Link onClick={ClickHandler} to="/login">
+                            Login
+                          </Link>
+                        </li>
+                        <li>
+                          <Link onClick={ClickHandler} to="/register">
+                            Register
+                          </Link>
+                        </li>
+                      </ul>
+                    </li>
+                    <li className="menu-item-has-children">
+                      <Link onClick={ClickHandler} to="/blog">
+                        Blog
+                      </Link>
+                      <ul className="sub-menu">
+                        <li>
+                          <Link onClick={ClickHandler} to="/blog">
                             Blog right sidebar
-                          </NavLink>
+                          </Link>
                         </li>
                         <li>
-                          <NavLink onClick={ClickHandler} to="/blog-left-sidebar">
+                          <Link onClick={ClickHandler} to="/blog-left-sidebar">
                             Blog left sidebar
-                          </NavLink>
+                          </Link>
                         </li>
                         <li>
-                          <NavLink onClick={ClickHandler} to="/blog-fullwidth">
+                          <Link onClick={ClickHandler} to="/blog-fullwidth">
                             Blog fullwidth
-                          </NavLink>
+                          </Link>
                         </li>
                         <li className="menu-item-has-children">
-                          <NavLink onClick={ClickHandler} to="/">
+                          <Link onClick={ClickHandler} to="/">
                             Blog details
-                          </NavLink>
+                          </Link>
                           <ul className="sub-menu">
                             <li>
-                              <NavLink onClick={ClickHandler} to="/blog-single/1">
+                              <Link onClick={ClickHandler} to="/blog-single/1">
                                 Blog details right sidebar
-                              </NavLink>
+                              </Link>
                             </li>
                             <li>
-                              <NavLink onClick={ClickHandler} to="/blog-single-left-sidebar/1">
+                              <Link onClick={ClickHandler} to="/blog-single-left-sidebar/1">
                                 Blog details left sidebar
-                              </NavLink>
+                              </Link>
                             </li>
                             <li>
-                              <NavLink onClick={ClickHandler} to="/blog-single-fullwidth/1">
+                              <Link onClick={ClickHandler} to="/blog-single-fullwidth/1">
                                 Blog details fullwidth
-                              </NavLink>
+                              </Link>
                             </li>
                           </ul>
                         </li>
                       </ul>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
               </div>
               <div className="col-lg-2 col-md-2 col-2">
                 <div className="header-right">
-                  <NavLink className="theme-btn" to="/rsvp">
-                    <span className="text">Attend Now</span>{" "}
+                  <Link className="theme-btn" onClick={ClickHandler} to="/invitation">
+                    <span className="text"> Invitation</span>{" "}
                     <span className="mobile">
                       <i className="fi flaticon-user"></i>
                     </span>
-                  </NavLink>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -175,4 +243,4 @@ const Header = (props) => {
   );
 };
 
-export default Header;
+export default Header2;
