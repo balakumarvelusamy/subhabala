@@ -4562,7 +4562,8 @@ img {
 .wpo-hero-style-3 .wedding-announcement .couple-text {
   width: 100%;
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: bottom !important;
+  padding-bottom: 20px;
 }
 
 .wpo-hero-style-3 .wedding-announcement .couple-text h2 {
