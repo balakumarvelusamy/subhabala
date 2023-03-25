@@ -1,7 +1,8 @@
 import React from "react";
 import TimeCountDown from "../countdown";
 import hImg1 from "../../images/slider/s1.png";
-import shape1 from "../../images/slider/shape.svg";
+// import shape1 from "../../images/slider/shape.svg";
+import shape1 from "../../images/slider/heart.png";
 import shape2 from "../../images/slider/flower1.png";
 import shape3 from "../../images/slider/flower2.png";
 
@@ -11,7 +12,7 @@ const Hero = (props) => {
       <div className="hero-container ">
         <div className="hero-inner">
           <div className="container-fluid">
-            <div className="row align-items-center">
+            <div className="row align-items-right">
               <div className="col-xl-8 col-lg-6 col-12">
                 <div className="wpo-static-hero-inner">
                   <div className="shape-1">

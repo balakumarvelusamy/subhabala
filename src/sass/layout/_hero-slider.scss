@@ -1008,7 +1008,8 @@
 		.couple-text {
 			width: 100%;
 			display: table-cell;
-			vertical-align: middle;
+			vertical-align: bottom;
+			padding-bottom: 20px;
 
 			h2 {
 				font-size: 100px;
@@ -1331,7 +1332,7 @@
 
 
 .wpo-hero-style-4 {
-	background: url(../../images/slider/slide-3.jpg) no-repeat center center;
+	background: url(../../images/slider/banner.jpg) no-repeat center center;
 	position: relative;
 
 	.wedding-announcement {

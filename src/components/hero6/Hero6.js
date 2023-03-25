@@ -2,7 +2,8 @@ import React from "react";
 import TimeCountDown from "../countdown";
 import Particles from "react-particles-js";
 import stockShape2 from "../../images/hero/icon.png";
-import shape1 from "../../images/slider/shape.svg";
+// import shape1 from "../../images/slider/shape.svg";
+import shape1 from "../../images/slider/heart.png";
 const Hero6 = (props) => {
   return (
     <section className="wpo-hero-style-4" id="home">
