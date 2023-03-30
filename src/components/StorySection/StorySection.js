@@ -1,7 +1,7 @@
 import React from "react";
 import SectionTitle from "../SectionTitle";
 import sImg1 from "../../images/story/1.jpg";
-import sImg2 from "../../images/story/2.jpg";
+import sImg2 from "../../images/story/2.gif";
 import sImg3 from "../../images/story/3.jpg";
 
 import shape1 from "../../images/rsvp/shape1.png";
