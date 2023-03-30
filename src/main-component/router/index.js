@@ -7,7 +7,7 @@ import HomePage3 from "../HomePage3/HomePage3";
 import HomePage4 from "../HomePage4/HomePage4";
 import HomePage5 from "../HomePage5/HomePage5";
 import HomePage6 from "../HomePage6/HomePage6";
-import HomePage7 from "../HomePage7/HomePage7";
+import SubaHomePage7 from "../SubaHomePage7/SubaHomePage7";
 import InvitationPage from "../InvitationPage/InvitationPage";
 import AboutPage from "../AboutPage/AboutPage";
 import WeddingPage from "../WeddingPage/WeddingPage";
@@ -44,7 +44,7 @@ const AllRoute = () => {
           <Route path="home4" element={<HomePage4 />} />
           <Route path="home5" element={<HomePage5 />} />
           <Route path="home6" element={<HomePage6 />} />
-          <Route path="home7" element={<HomePage7 />} />
+          <Route path="home7" element={<SubaHomePage7 />} />
           <Route path="invitation" element={<InvitationPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="wedding" element={<WeddingPage />} />
