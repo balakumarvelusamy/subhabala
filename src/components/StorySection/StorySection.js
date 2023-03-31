@@ -40,7 +40,7 @@ const StorySection = (props) => {
                           <div className="inner-ball"></div>
                         </div>
                       </div>
-                      <p>Our First Meet was a Virtual which was “Totally Arranged by Parents” & We actually think of it as a “Destiny”!!! We just had a normal conversation of how everything was going with our lives and most of the conversation our filled with “Vadivel Sir” dialogues and I realized how funny we can be together!!</p>
+                      <p>Our First Meet was a Virtual which was “Totally Arranged by Parents” & We actually think of it as a “Destiny”!!! We just had a normal conversation of how everything was going on with our lives and most of the conversation our filled with “Vadivel Sir” dialogues and I realized how funny we can be together!!</p>
                     </div>
                   </div>
                 </div>
