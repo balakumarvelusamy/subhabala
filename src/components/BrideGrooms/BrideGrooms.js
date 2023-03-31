@@ -22,19 +22,19 @@ const brideGrooms = [
     id:'2',
     tImg:timg2,
     name:'Vanmathy',
-    title:'Bride’smaid',     
+    title:'Bridesmaid',     
  },
  {
     id:'3',
     tImg:timg3,
-    name:'Sukumar',
-    title:'Bride’smaid',     
+    name:'',
+    title:'',     
  },
  {
     id:'4',
     tImg:timg4,
     name:'Jerome Bell',
-    title:'Groom’s Sister',     
+    title:'Grooms Sister',     
  },
  {
     id:'5',
