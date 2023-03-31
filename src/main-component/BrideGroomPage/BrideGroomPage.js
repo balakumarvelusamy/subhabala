@@ -9,7 +9,7 @@ const BrideGroomPage =() => {
     return(
         <Fragment>
             <Navbar2/>
-            <PageTitle pageTitle={'Bridesmaids & Groomsmen'} pagesub={'Bridesmaids & Groomsmen'}/> 
+            <PageTitle pageTitle={'Engagement Scenes'} pagesub={'Engagement Scenes'}/> 
             <BrideGrooms2/>
             <Footer/>
             <Scrollbar/>

@@ -17,20 +17,20 @@ const Brides = [
   {
     id:'1',
     tImg:timg1,
-    name:'Leslie Alexander',
-    title:'Brides Brother',     
+    name:'Sanjay kumar',
+    title:'Bride’s Brother',     
  },
  {
     id:'2',
     tImg:timg2,
-    name:'Jenny Wilson',
-    title:'Brides Sister',     
+    name:'Vanmathy',
+    title:'Bride’smaid',     
  },
  {
     id:'3',
     tImg:timg3,
-    name:'Robert Fox',
-    title:'Brides Brother',     
+    name:'Sukumar',
+    title:'Bride’sfriends',     
  }
 ]
 const Grooms = [

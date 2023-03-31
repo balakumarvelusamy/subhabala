@@ -11,8 +11,8 @@ const Events = [
   },
 
   {
-    title: "Wedding Party",
-    li1: "Sunday, 5 June, 2023 9:00 PM IST Onwards",
+    title: "The Wedding",
+    li1: "Monday, 5 June, 2023 9:00 AM IST Onwards",
     li2: "Venkateswara Mahal, Thuraiyur",
     li3: "Perambalur District",
   },

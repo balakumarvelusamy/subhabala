@@ -15,20 +15,20 @@ const brideGrooms = [
   {
     id:'1',
     tImg:timg1,
-    name:'Leslie Alexander',
-    title:'Brides Brother',     
+    name:'Sanjay kumar',
+    title:'Bride’s Brother',     
  },
  {
     id:'2',
     tImg:timg2,
-    name:'Jenny Wilson',
-    title:'Brides Sister',     
+    name:'Vanmathy',
+    title:'Bride’smaid',     
  },
  {
     id:'3',
     tImg:timg3,
-    name:'Robert Fox',
-    title:'Brides Brother',     
+    name:'Sukumar',
+    title:'Bride’smaid',     
  },
  {
     id:'4',
@@ -56,7 +56,7 @@ const BrideGrooms = (props) => {
   return (
       <section className={`wpo-team-section ${props.tClass}`}>
         <div className="container">
-          <SectionTitle MainTitle={'Bridesmaids & Groomsmen'} />
+          <SectionTitle MainTitle={'Engagement Scenes'} />
           <div className="wpo-team-wrap">
             <div className="row">
               {brideGrooms.map((brideGroom, tm) => (
