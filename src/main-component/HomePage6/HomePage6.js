@@ -27,7 +27,7 @@ const HomePage6 = () => {
       <RSVP />
       <BrideGrooms />
       <EventSection />
-      {/* <PartnerSection /> */}
+      <PartnerSection />
       {/* <BlogSection /> */}
       <Footer />
       <Scrollbar />
