@@ -1,114 +1,115 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import SectionTitle from "../SectionTitle";
-import timg1 from '../../images/team/img-1.jpg'
-import timg2 from '../../images/team/img-2.jpg'
-import timg3 from '../../images/team/img-3.jpg'
-import timg4 from '../../images/team/img-4.jpg'
-import timg5 from '../../images/team/img-5.jpg'
-import timg6 from '../../images/team/img-6.jpg'
+import timg1 from "../../images/team/img-1.jpg";
+import timg2 from "../../images/team/van.jpg";
+import timg3 from "../../images/team/img-3.jpg";
+import timg4 from "../../images/team/img-4.jpg";
+import timg5 from "../../images/team/img-5.jpg";
+import timg6 from "../../images/team/img-6.jpg";
 
-import shape1 from '../../images/team/shape1.jpg'
-import shape2 from '../../images/team/shape2.jpg'
+import shape1 from "../../images/team/shape1.jpg";
+import shape2 from "../../images/team/shape2.jpg";
 
 import VideoSection from "../VideoSection";
 
 const Brides = [
   {
-    id:'1',
-    tImg:timg1,
-    name:'Sanjay kumar',
-    title:'Bride’s Brother',     
- },
- {
-    id:'2',
-    tImg:timg2,
-    name:'Vanmathy',
-    title:'Bride’smaid',     
- },
- {
-    id:'3',
-    tImg:timg3,
-    name:'Sukumar',
-    title:'Bride’sfriends',     
- }
-]
+    id: "1",
+    tImg: timg1,
+    name: "Sanjay kumar",
+    title: "Bride’s Brother",
+  },
+  {
+    id: "2",
+    tImg: timg2,
+    name: "Vanmathy",
+    title: "Bride’smaid",
+  },
+];
 const Grooms = [
- {
-    id:'1',
-    tImg:timg4,
-    name:'Jerome Bell',
-    title:'Groom’s Sister',     
- },
- {
-    id:'2',
-    tImg:timg5,
-    name:'Esther Howard',
-    title:'Groom’s Brother',     
- },
- {
-    id:'3',
-    tImg:timg6,
-    name:'Bessie Cooper',
-    title:'Brides Maid',     
- },
-]
-
+  {
+    id: "1",
+    tImg: timg4,
+    name: "Jerome Bell",
+    title: "Groom’s Sister",
+  },
+  {
+    id: "2",
+    tImg: timg5,
+    name: "Esther Howard",
+    title: "Groom’s Brother",
+  },
+  {
+    id: "3",
+    tImg: timg6,
+    name: "Bessie Cooper",
+    title: "Brides Maid",
+  },
+];
 
 const BrideGrooms2 = (props) => {
   const ClickHandler = () => {
     window.scrollTo(10, 0);
-  }
+  };
 
   return (
     <section className="bride-groom-section">
       <div className="wpo-team-section section-padding pt-120">
         <div className="container">
-          <SectionTitle MainTitle={'Bridesmaids'} />
+          <SectionTitle MainTitle={"Bridesmaids"} />
           <div className="wpo-team-wrap">
             <div className="row">
               {Brides.slice(0, 3).map((Bride, tm) => (
                 <div className="col col-lg-4 col-md-6 col-sm-12 col-12" key={tm}>
-                    <div className="wpo-team-item">
-                        <div className="wpo-team-img">
-                            <div className="wpo-team-img-inner">
-                                <img src={Bride.tImg} alt="" />
-                            </div>
-                            <div className="shape-1"><img src={shape1} alt=""/></div>
-                            <div className="shape-2"><img src={shape2} alt=""/></div>
-                        </div>
-                        <div className="wpo-team-text">
-                            <h3>{Bride.name}</h3>
-                            <span>{Bride.title}</span>
-                        </div>
+                  <div className="wpo-team-item">
+                    <div className="wpo-team-img">
+                      <div className="wpo-team-img-inner">
+                        <img src={Bride.tImg} alt="" />
+                      </div>
+                      <div className="shape-1">
+                        <img src={shape1} alt="" />
+                      </div>
+                      <div className="shape-2">
+                        <img src={shape2} alt="" />
+                      </div>
                     </div>
+                    <div className="wpo-team-text">
+                      <h3>{Bride.name}</h3>
+                      <span>{Bride.title}</span>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
       </div>
-      <VideoSection/>
+      <VideoSection />
       <div className="wpo-team-section pt-120 section-padding">
         <div className="container">
-          <SectionTitle MainTitle={'Groomsmen'} />
+          <SectionTitle MainTitle={"Groomsmen"} />
           <div className="wpo-team-wrap">
             <div className="row">
               {Grooms.slice(0, 6).map((Groom, gm) => (
                 <div className="col col-lg-4 col-md-6 col-sm-12 col-12" key={gm}>
-                    <div className="wpo-team-item">
-                        <div className="wpo-team-img">
-                            <div className="wpo-team-img-inner">
-                                <img src={Groom.tImg} alt="" />
-                            </div>
-                            <div className="shape-1"><img src={shape1} alt=""/></div>
-                            <div className="shape-2"><img src={shape2} alt=""/></div>
-                        </div>
-                        <div className="wpo-team-text">
-                            <h3>{Groom.name}</h3>
-                            <span>{Groom.title}</span>
-                        </div>
+                  <div className="wpo-team-item">
+                    <div className="wpo-team-img">
+                      <div className="wpo-team-img-inner">
+                        <img src={Groom.tImg} alt="" />
+                      </div>
+                      <div className="shape-1">
+                        <img src={shape1} alt="" />
+                      </div>
+                      <div className="shape-2">
+                        <img src={shape2} alt="" />
+                      </div>
                     </div>
+                    <div className="wpo-team-text">
+                      <h3>{Groom.name}</h3>
+                      <span>{Groom.title}</span>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -116,7 +117,7 @@ const BrideGrooms2 = (props) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default BrideGrooms2;
