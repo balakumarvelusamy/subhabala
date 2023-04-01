@@ -1,10 +1,17 @@
-import React from "react";
+import { React, useState } from "react";
 import TimeCountDown from "../countdown";
 import Particles from "react-particles-js";
+import { format } from "date-fns";
 import stockShape2 from "../../images/hero/icon.png";
 // import shape1 from "../../images/slider/shape.svg";
 import shape1 from "../../images/slider/heart.png";
 const Hero6 = (props) => {
+  var [currentdate, setDate] = useState(new Date().setHours(0, 0, 0, 0));
+
+  var marriagedate = new Date("06/05/2023").setHours(0, 0, 0, 0);
+
+  // mm/dd/yyyy
+
   return (
     <section className="wpo-hero-style-4" id="home">
       <div className="wedding-announcement">
@@ -15,12 +22,34 @@ const Hero6 = (props) => {
           <h2>
             Bala <span className="text-primary-suba">&</span> Subha
           </h2>
-          <p>WE ARE GETTING MARRIED JUNE 5, 2023</p>
-          <div className="wpo-wedding-date">
-            <div className="clock-grids">
-              <TimeCountDown />
-            </div>
-          </div>
+          {/* in use  bala */}
+          {marriagedate == currentdate ? (
+            <>
+              <h2>
+                {" "}
+                <br />
+                Our Special Day has Arrived{" "}
+              </h2>
+            </>
+          ) : currentdate < marriagedate ? (
+            <>
+              {" "}
+              <p>WE ARE GETTING MARRIED JUNE 5, 2023</p>
+              <div className="wpo-wedding-date">
+                <div className="clock-grids">
+                  <TimeCountDown />
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              <br />
+              <h2>
+                Hurray, <br />
+                We got married!!!{" "}
+              </h2>
+            </>
+          )}
         </div>
       </div>
       <Particles
