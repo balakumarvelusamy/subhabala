@@ -38,10 +38,10 @@ const RSVP = (props) => {
       setForms({
         name: "",
         email: "",
-        address: "",
-        meal: "",
+
         attend: "",
         guest: "",
+        wishes: "",
       });
     } else {
       validator.showMessages();
@@ -66,11 +66,11 @@ const RSVP = (props) => {
               </div>
               <div className="radio-buttons">
                 <p>
-                  <input type="radio" id="attend" name="radio-group" defaultChecked />
+                  <input type="radio" id="attend" name="radio-group1" />
                   <label htmlFor="attend">Yes, I will be there</label>
                 </p>
                 <p>
-                  <input type="radio" id="not" name="radio-group" />
+                  <input type="radio" id="not" name="radio-group1" />
                   <label htmlFor="not">Sorry, I can’t come</label>
                 </p>
               </div>
@@ -78,9 +78,26 @@ const RSVP = (props) => {
                 <input value={forms.guest} type="number" name="guest" maxlength="100" minlength="1" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} className="form-control" placeholder="Number Of Guests" />
                 {validator.message("guest", forms.guest, "required|number")}
               </div>
-              <div className="form-field">
+              {/* <div className="form-field ">
                 <input value={forms.attend} type="text" name="attend" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} className="form-control" placeholder="What Will You Be Attending" />
                 {validator.message("attend", forms.attend, "required")}
+              </div> */}
+              <div className="radio-buttons">
+                <p>
+                  <input type="radio" id="reception" name="radio-group" />
+                  <label htmlFor="reception">Reception</label>
+                </p>
+                <p>
+                  <input type="radio" id="marriage" name="radio-group" />
+                  <label htmlFor="marriage">Marriage</label>
+                </p>
+                <p>
+                  <input type="radio" id="both" name="radio-group" />
+                  <label htmlFor="both">Both</label>
+                </p>
+              </div>
+              <div className="form-field">
+                <textarea rows="4" value={forms.wishes} name="wishes" className="form-control" placeholder="Your Best Wishes for our next phase of life."></textarea>
               </div>
               {/* <div className="form-field">
                                 <select
