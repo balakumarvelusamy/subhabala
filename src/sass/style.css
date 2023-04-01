@@ -6840,7 +6840,7 @@ img {
   width: 100%;
   height: 430px;
   content: "";
-  background: rgba(197, 144, 151, 0.8);
+  background: #198754 !important;
   z-index: -1;
 }
 
