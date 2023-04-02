@@ -95,5 +95,19 @@ code {
   display: none;
 pointer-events: none;
 }
+ .video-btn {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   -webkit-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+   width: 80px;
+   height: 80px;
+   border: 2px solid #fff;
+   text-align: center;
+   border-radius: 50%;
+   line-height: 76px;
+   background: #fff;
+ }
 
    

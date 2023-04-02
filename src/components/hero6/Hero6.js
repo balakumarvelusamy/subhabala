@@ -4,10 +4,11 @@ import Particles from "react-particles-js";
 import stockShape2 from "../../images/hero/icon.png";
 // import shape1 from "../../images/slider/shape.svg";
 import shape1 from "../../images/slider/heart.png";
+import config from "../../config.json";
 const Hero6 = (props) => {
   var [currentdate, setDate] = useState(new Date().setHours(0, 0, 0, 0));
 
-  var marriagedate = new Date("06/05/2023").setHours(0, 0, 0, 0);
+  var marriagedate = new Date(config.marriagedate).setHours(0, 0, 0, 0);
 
   // mm/dd/yyyy
 
@@ -18,6 +19,15 @@ const Hero6 = (props) => {
           <div className="shape-1">
             <img src={shape1} alt="" />
           </div>
+          {config.ytlivelink ? (
+            <div className="text-white video-btn ">
+              <a target="_blank" href={config.ytlivelink}>
+                <i className="fi flaticon-play text-primary-suba" aria-hidden="true"></i>
+              </a>
+            </div>
+          ) : (
+            ""
+          )}
           <h2>
             Bala <span className="text-primary-suba">&</span> Subha
           </h2>
