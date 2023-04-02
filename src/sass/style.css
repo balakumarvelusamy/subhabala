@@ -5560,11 +5560,11 @@ img {
 
 /* 3.3 wpo-video-section*/
 .wpo-video-section {
-  position: relative;
+  /* position: relative; */
   z-index: 1;
-  background: url(../images/cta.jpg) no-repeat center center;
+  /* background: url(../images/meu.png) no-repeat center center;
   height: 400px;
-  background-attachment: fixed;
+  background-attachment: fixed; */
 }
 
 @media (min-width: 1600px) {

@@ -1,6 +1,6 @@
 {
-  "domain": "photos.theuniquecreations.com",
-  "storage": "photos.theuniquecreations.com",
+  "domain": "talesofsuba.com",
+  "storage": "talesofsuba.com",
   "service_url": "https://asia-south1-tucfbclouddb.cloudfunctions.net/tuc_shop_node_api/api/",
   "email_service_url": "https://asia-south1-tucfbclouddb.cloudfunctions.net/tuc_shop_node_api/email/",
   "==========": "============",
@@ -8,8 +8,10 @@
   "service_url_local": "http://localhost:8000/api/",
   "service_url_prod": "https://asia-south1-tucfbclouddb.cloudfunctions.net/tuc_shop_node_api/api/",
   "homeimage": "",
+  "ytlivelink": "",
   "logo": "",
-
+  "marriagedate": "06/05/2023",
+  "ytvideoId": "rtOvBOTyX00",
   "aboutustitle": "",
   "aboutus1": "",
   "aboutus2": "",

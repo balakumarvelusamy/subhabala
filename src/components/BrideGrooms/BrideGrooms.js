@@ -35,7 +35,7 @@ const BrideGrooms = (props) => {
   return (
     <section className={`wpo-team-section ${props.tClass}`}>
       <div className="container">
-        <SectionTitle MainTitle={"Bridesmaids & Groomsmen"} />
+        {/* <SectionTitle MainTitle={"Bridesmaids & Groomsmen"} /> */}
         <div className="wpo-team-wrap">
           <div className="row">
             {brideGrooms.map((brideGroom, tm) => (
