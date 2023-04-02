@@ -100,14 +100,10 @@ const Header = (props) => {
                         Moments
                       </Link>
                     </li>
-                    <li>
-                      <Link activeClass="active" to="RSVP" spy={true} smooth={true} duration={500}>
-                        RSVP
-                      </Link>
-                    </li>
+
                     <li>
                       <Link activeClass="active" to="event" spy={true} smooth={true} duration={500}>
-                        Events
+                        Venue
                       </Link>
                     </li>
                     <li>
@@ -165,7 +161,7 @@ const Header = (props) => {
               <div className="col-lg-2 col-md-2 col-2">
                 <div className="header-right">
                   <NavLink className="theme-btn" onClick={ClickHandler} to="/invitation">
-                    <span className="text"> Invitation</span>{" "}
+                    <span className="text"> Invitation & RSVP</span>{" "}
                     <span className="mobile">
                       <i className="fi flaticon-user"></i>
                     </span>

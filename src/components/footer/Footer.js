@@ -121,7 +121,7 @@ const Footer = (props) => {
               <p className="copyright ">
                 {" "}
                 &copy; 2023, Designed with 💚 by Subha & Bala.{" "}
-                <Link onClick={ClickHandler} to="https://instagram.com/theuniquecreations">
+                <Link className="d-none" onClick={ClickHandler} to="https://instagram.com/theuniquecreations">
                   <i>Contact: The Unique Creations</i>
                 </Link>
               </p>

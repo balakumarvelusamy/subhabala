@@ -24,7 +24,7 @@ const SubaHomePage6 = () => {
       <StorySection />
       <CtaSection />
       <PortfolioSection />
-      <RSVP />
+
       <BrideGrooms />
       <EventSection />
       <Gallery />

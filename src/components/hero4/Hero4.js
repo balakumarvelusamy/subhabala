@@ -17,8 +17,12 @@ const Hero4 = (props) => {
                     <p>are whole heartedly inviting you!!!</p>
                     <ul>
                       <li>
-                        Monday, 5 June, 2023 <br />
-                        9:00 AM – 12:30 PM
+                        <b className="text-primary-suba">Reception</b> <br />
+                        <p>Sunday, 4 June, 2023 7:00PM IST Onwards</p>
+                      </li>
+                      <li>
+                        <b className="text-primary-suba">Wedding</b> <br />
+                        <p>Monday, 5 June, 2023 9:00AM – 12:30PM IST</p>
                       </li>
                       <li>Sri Venkateshwara Mahal, Thuraiyur</li>
                       <li>

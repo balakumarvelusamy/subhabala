@@ -1,12 +1,14 @@
 import React, { Fragment } from "react";
-import Navbar1 from "../../components/Navbar";
+import Navbar from "../../components/Navbar";
+import RSVP from "../../components/RSVP";
 import Hero4 from "../../components/hero4/Hero4";
 
 const InvitationPage = () => {
   return (
     <Fragment>
-      <Navbar1 />
+      <Navbar />
       <Hero4 />
+      <RSVP />
     </Fragment>
   );
 };
