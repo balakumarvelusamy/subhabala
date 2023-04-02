@@ -37,13 +37,14 @@ const AllRoute = () => {
         <Routes>
           <Route path="/" element={<SubaHomePage6 />} />
           <Route path="home" element={<SubaHomePage6 />} />
-          <Route path="home2" element={<Homepage2 />} />
+          <Route path="invitation" element={<InvitationPage />} />
+          <Route path="*" element={<ErrorPage />} />
+          {/* <Route path="home2" element={<Homepage2 />} />
           <Route path="home3" element={<HomePage3 />} />
           <Route path="home4" element={<HomePage4 />} />
           <Route path="home5" element={<HomePage5 />} />
           <Route path="home6" element={<SubaHomePage6 />} />
           <Route path="home7" element={<HomePage7 />} />
-          <Route path="invitation" element={<InvitationPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="wedding" element={<WeddingPage />} />
           <Route path="wedding-details" element={<WeddingDetailsPage />} />
@@ -65,7 +66,7 @@ const AllRoute = () => {
           <Route path="blog-fullwidth" element={<BlogPageFullwidth />} />
           <Route path="login" element={<LoginPage />} />
           <Route path="register" element={<SignUpPage />} />
-          <Route path="forgot-password" element={<ForgotPassword />} />
+          <Route path="forgot-password" element={<ForgotPassword />} /> */}
         </Routes>
       </BrowserRouter>
     </div>

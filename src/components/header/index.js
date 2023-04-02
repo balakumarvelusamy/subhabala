@@ -227,8 +227,8 @@ const Header2 = (props) => {
               </div>
               <div className="col-lg-2 col-md-2 col-2">
                 <div className="header-right">
-                  <Link className="theme-btn" onClick={ClickHandler} to="/invitation">
-                    <span className="text"> Invitation</span>{" "}
+                  <Link className="theme-btn" onClick={ClickHandler} to="/home">
+                    <span className="text"> Home</span>{" "}
                     <span className="mobile">
                       <i className="fi flaticon-user"></i>
                     </span>
