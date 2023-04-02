@@ -48,33 +48,35 @@ const Gallery = () => {
 
   const { categories } = useMasonry(tucdata, ".portfolio-list", ".masonry-grid", ".messonry-button", ".messonry-button button");
   return (
-    <div className="portfolio-area portfolio-default-area ">
-      <SectionTitle MainTitle={"Our Handpicked Gallery"} />
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-12">
-            <div className="messonry-button text-center mb-50">
-              <PortfolioFilter categories={categories} />
+    <section id="gallery">
+      <div className="portfolio-area portfolio-default-area ">
+        <SectionTitle MainTitle={"Our Handpicked Gallery"} />
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-12">
+              <div className="messonry-button text-center mb-50">
+                <PortfolioFilter categories={categories} />
+              </div>
+            </div>
+          </div>
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 portfolio-list mb-n30 min-height-700">
+            <div className="col resizer"></div>
+            {tucdata &&
+              tucdata.map((portfolio) => (
+                <div key={portfolio.gallery_id} className={`col masonry-grid mb-10 ${portfolio.title}`}>
+                  <PortfolioItem portfolio={portfolio} />
+                </div>
+              ))}
+          </div>
+          <br />
+          <div className="row d-none">
+            <div className="col-lg-12 text-center mt-60">
+              <button className="btn-portfolio"></button>
             </div>
           </div>
         </div>
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 portfolio-list mb-n30 min-height-700">
-          <div className="col resizer"></div>
-          {tucdata &&
-            tucdata.map((portfolio) => (
-              <div key={portfolio.gallery_id} className={`col masonry-grid mb-10 ${portfolio.title}`}>
-                <PortfolioItem portfolio={portfolio} />
-              </div>
-            ))}
-        </div>
-        <br />
-        <div className="row d-none">
-          <div className="col-lg-12 text-center mt-60">
-            <button className="btn-portfolio"></button>
-          </div>
-        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
