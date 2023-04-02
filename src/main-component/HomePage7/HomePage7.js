@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import Navbar2 from "../../components/Navbar2";
-import Hero6 from "../../components/hero6/Hero6";
+import Hero7 from "../../components/hero7/Hero7";
 import Scrollbar from "../../components/scrollbar";
 import CoupleSection from "../../components/CoupleSection/CoupleSection";
 import VideoSection from "../../components/VideoSection";
@@ -14,12 +14,13 @@ import Footer from "../../components/footer/Footer";
 import CtaSection from "../../components/CtaSection/CtaSection";
 import RSVP from "../../components/RSVP";
 
-const HomePage6 = () => {
+const HomePage7 = () => {
   return (
     <Fragment>
       <Navbar2 />
-      <Hero6 />
+      <Hero7 />
       <CoupleSection />
+
       <VideoSection />
       <StorySection />
       <CtaSection />
@@ -27,6 +28,7 @@ const HomePage6 = () => {
       <RSVP />
       <BrideGrooms />
       <EventSection />
+
       <PartnerSection />
       {/* <BlogSection /> */}
       <Footer />
@@ -35,4 +37,4 @@ const HomePage6 = () => {
   );
 };
 
-export default HomePage6;
+export default HomePage7;

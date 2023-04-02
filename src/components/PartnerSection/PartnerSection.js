@@ -7,7 +7,7 @@ import pimg2 from "../../images/partners/1makeup.png";
 import pimg3 from "../../images/partners/1gt.png";
 import pimg4 from "../../images/partners/1mahal.png";
 import pimg5 from "../../images/partners/5.png";
-
+import SectionTitle from "../SectionTitle";
 const partners = [
   {
     pImg: pimg1,
@@ -72,6 +72,7 @@ const PartnerSection = (props) => {
 
   return (
     <section className={`wpo-partners-section ${props.pClass}`}>
+      <SectionTitle MainTitle={"Our Partners"} />
       <div className="container">
         <div className="row">
           <div className="col col-xs-12">
@@ -87,6 +88,7 @@ const PartnerSection = (props) => {
           </div>
         </div>
       </div>
+      <br />
     </section>
   );
 };

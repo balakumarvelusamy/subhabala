@@ -1,7 +1,6 @@
 import { React, useState } from "react";
 import TimeCountDown from "../countdown";
 import Particles from "react-particles-js";
-import { format } from "date-fns";
 import stockShape2 from "../../images/hero/icon.png";
 // import shape1 from "../../images/slider/shape.svg";
 import shape1 from "../../images/slider/heart.png";

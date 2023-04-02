@@ -7,3 +7,40 @@ p{
 .bg-primary-suba {
     background-color: #4bb878 !important;
 }
+
+.messonry-button button {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    border: 0 none;
+    position: relative;
+}
+
+.messonry-button button span {
+    position: relative;
+    display: inline-block;
+    padding: 5px 20px;
+}
+
+.messonry-button button span.filter-text {
+    text-transform: uppercase !important;
+    font-weight: 600;
+    line-height: 1.58;
+    font-size: 16px;
+    color: #666666;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.messonry-button button:hover span.filter-counter {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -100%);
+}
+
+.messonry-button button:hover span.filter-text {
+    color: #996600;
+}
+
+.messonry-button button.is-checked span.filter-text {
+    color: #996600;
+}
