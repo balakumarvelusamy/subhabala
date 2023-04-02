@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import Navbar2 from "../../components/Navbar2";
-import Hero7 from "../../components/hero7/Hero7";
+import Hero6 from "../../components/hero6/Hero6";
 import Scrollbar from "../../components/scrollbar";
 import CoupleSection from "../../components/CoupleSection/CoupleSection";
 import VideoSection from "../../components/VideoSection";
@@ -13,12 +13,12 @@ import BlogSection from "../../components/BlogSection/BlogSection";
 import Footer from "../../components/footer/Footer";
 import CtaSection from "../../components/CtaSection/CtaSection";
 import RSVP from "../../components/RSVP";
-
-const SubaHomePage7 = () => {
+import Gallery from "../../components/Gallery";
+const SubaHomePage6 = () => {
   return (
     <Fragment>
       <Navbar2 />
-      <Hero7 />
+      <Hero6 />
       <CoupleSection />
       <VideoSection />
       <StorySection />
@@ -27,6 +27,7 @@ const SubaHomePage7 = () => {
       <RSVP />
       <BrideGrooms />
       <EventSection />
+      <Gallery />
       <PartnerSection />
       {/* <BlogSection /> */}
       <Footer />
@@ -35,4 +36,4 @@ const SubaHomePage7 = () => {
   );
 };
 
-export default SubaHomePage7;
+export default SubaHomePage6;

@@ -1,13 +1,11 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import Homepage6 from "../HomePage6/HomePage6";
 import Homepage2 from "../HomePage2/HomePage2";
 import HomePage3 from "../HomePage3/HomePage3";
 import HomePage4 from "../HomePage4/HomePage4";
 import HomePage5 from "../HomePage5/HomePage5";
-import HomePage6 from "../HomePage6/HomePage6";
-import SubaHomePage7 from "../SubaHomePage7/SubaHomePage7";
+import SubaHomePage6 from "../SubaHomePage6/SubaHomePage6";
+import HomePage7 from "../HomePage7/HomePage7";
 import InvitationPage from "../InvitationPage/InvitationPage";
 import AboutPage from "../AboutPage/AboutPage";
 import WeddingPage from "../WeddingPage/WeddingPage";
@@ -37,14 +35,14 @@ const AllRoute = () => {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Homepage6 />} />
-          <Route path="home" element={<Homepage6 />} />
+          <Route path="/" element={<SubaHomePage6 />} />
+          <Route path="home" element={<SubaHomePage6 />} />
           <Route path="home2" element={<Homepage2 />} />
           <Route path="home3" element={<HomePage3 />} />
           <Route path="home4" element={<HomePage4 />} />
           <Route path="home5" element={<HomePage5 />} />
-          <Route path="home6" element={<HomePage6 />} />
-          <Route path="home7" element={<SubaHomePage7 />} />
+          <Route path="home6" element={<SubaHomePage6 />} />
+          <Route path="home7" element={<HomePage7 />} />
           <Route path="invitation" element={<InvitationPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="wedding" element={<WeddingPage />} />

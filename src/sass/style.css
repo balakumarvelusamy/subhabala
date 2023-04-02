@@ -60,6 +60,8 @@ Version:        1.0.0
   src: url("../fonts/Donalia.eot?#iefix") format("embedded-opentype"), url("../fonts/Donalia.woff2") format("woff2"), url("../fonts/Donalia.woff") format("woff"), url("../fonts/Donalia.ttf") format("truetype");
 }
 
+
+
 /* 1.1	Theme Reset Style */
 html {
   font-size: 15px;
