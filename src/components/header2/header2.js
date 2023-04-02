@@ -96,8 +96,8 @@ const Header = (props) => {
                       </Link>
                     </li>
                     <li>
-                      <Link activeClass="active" to="gallery" spy={true} smooth={true} duration={500}>
-                        Gallery
+                      <Link activeClass="active" to="moments" spy={true} smooth={true} duration={500}>
+                        Moments
                       </Link>
                     </li>
                     <li>
@@ -108,6 +108,11 @@ const Header = (props) => {
                     <li>
                       <Link activeClass="active" to="event" spy={true} smooth={true} duration={500}>
                         Events
+                      </Link>
+                    </li>
+                    <li>
+                      <Link activeClass="active" to="gallery" spy={true} smooth={true} duration={500}>
+                        Gallery
                       </Link>
                     </li>
                     <li className="menu-item-has-children d-none">

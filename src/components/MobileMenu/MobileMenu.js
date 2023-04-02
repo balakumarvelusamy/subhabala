@@ -123,8 +123,8 @@ const MobileMenu = () => {
             </Link>
           </li>
           <li>
-            <Link activeClass="active" to="gallery" spy={true} smooth={true} duration={500}>
-              Gallery
+            <Link activeClass="active" to="moments" spy={true} smooth={true} duration={500}>
+              Moments
             </Link>
           </li>
           <li>
@@ -135,6 +135,11 @@ const MobileMenu = () => {
           <li>
             <Link activeClass="active" to="event" spy={true} smooth={true} duration={500}>
               Events
+            </Link>
+          </li>
+          <li>
+            <Link activeClass="active" to="gallery" spy={true} smooth={true} duration={500}>
+              Gallery
             </Link>
           </li>
         </ul>
