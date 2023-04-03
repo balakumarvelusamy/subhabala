@@ -7,7 +7,7 @@ import vec2 from "../../images/rsvp/flower2.png";
 
 import shape1 from "../../images/rsvp/shape1.png";
 import shape2 from "../../images/rsvp/shape2.png";
-
+import config from "../../config.json";
 const RSVP = (props) => {
   const [forms, setForms] = useState({
     name: "",
@@ -16,6 +16,7 @@ const RSVP = (props) => {
     attend: "",
     guest: "",
   });
+  const [messagae, setMessage] = useState("");
   const [validator] = useState(
     new SimpleReactValidator({
       className: "errorMessage",
@@ -25,27 +26,53 @@ const RSVP = (props) => {
     setForms({ ...forms, [e.target.name]: e.target.value });
     if (validator.allValid()) {
       validator.hideMessages();
+      setMessage("");
     } else {
       validator.showMessages();
+      setMessage("");
     }
   };
 
   const submitHandler = (e) => {
+    if (e.target.attend === "") return;
     setForms({ ...forms, [e.target.name]: e.target.value });
-    console.log("subarsvp", forms);
+    console.log("subarsvp", e.target.name.value);
+
     e.preventDefault();
+
+    const body = "<p>Hello " + e.target.name.value + "," + "</p>" + "<p>Thank you for reaching out to us.</p>" + "<br/><p>Regards,</p> <p><a href='" + config.website + "'>" + config.websitetitle + "</a></p>" + "<table  style='border: 1px solid black'>" + "<tr style='border: 1px solid black'><td> <i>Name:</i></td> <td> <i>" + e.target.name.value + "</i></td></tr>" + "<tr style='border: 1px solid black'><td><i>Email:</i></td><td> <i>" + e.target.email.value + "</i></td></tr>" + "<tr style='border: 1px solid black'><td><i>Guest:</i></td><td> <i>" + e.target.guest.value + "</i></td></tr>" + "<tr style='border: 1px solid black'><td><i>Attent:</i></td><td> <i>" + e.target.attend.value + "</i></td></tr>" + "<tr style='border: 1px solid black'><td><i>Message:</i></td><td> <i>" + e.target.wishes.value + "</i></td></tr>" + "</table>";
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        from: config.fromemail,
+        to: e.target.email.value + "," + e.target.email.fromemail,
+        subject: config.subject + e.target.name.value,
+        text: "",
+        html: body,
+      }),
+    };
+    console.log(requestOptions);
+    try {
+      fetch(config.email_service_url, requestOptions).then((response) => console.log(response.json()));
+      setMessage("Thanks for Contacting us.");
+      e.target.reset();
+    } catch (err) {
+      console.log(err);
+    }
+
     if (validator.allValid()) {
       validator.hideMessages();
       setForms({
         name: "",
         email: "",
-
         attend: "",
         guest: "",
         wishes: "",
       });
     } else {
       validator.showMessages();
+      setMessage("");
     }
   };
 
@@ -65,16 +92,6 @@ const RSVP = (props) => {
                 <input value={forms.email} type="email" name="email" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} required className="form-control" placeholder="Your Email" />
                 {validator.message("email", forms.email, "required|email")}
               </div>
-              {/* <div className="radio-buttons">
-                <p>
-                  <input type="radio" id="attend" name="radiogroup1" />
-                  <label htmlFor="attend">Yes, I will be there</label>
-                </p>
-                <p>
-                  <input type="radio" id="not" name="radiogroup1" />
-                  <label htmlFor="not">Sorry, I can’t come</label>
-                </p>
-              </div> */}
 
               <div className="form-field">
                 <input value={forms.guest} type="number" name="guest" maxLength="10" minLength="1" onBlur={(e) => changeHandler(e)} required onChange={(e) => changeHandler(e)} className="form-control" placeholder="Number Of Guests"></input>
@@ -83,7 +100,7 @@ const RSVP = (props) => {
 
               <div className="form-field">
                 I will attend:
-                <select onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} value={forms.meal} type="text" className="form-control" name="attend">
+                <select onBlur={(e) => changeHandler(e)} required onChange={(e) => changeHandler(e)} value={forms.meal} type="text" className="form-control" name="attend">
                   <option></option>
                   <option value="Reception">Reception, July 4 7:00 PM</option>
                   <option value="Marriage">Marriage, July 5 9:00 AM</option>
@@ -92,9 +109,9 @@ const RSVP = (props) => {
                 </select>
               </div>
               <div className="form-field">
-                <textarea rows="4" value={forms.wishes} name="wishes" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} className="form-control" placeholder="Your Best Wishes for our next phase of life."></textarea>
+                <textarea rows="4" value={forms.wishes} name="wishes" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} className="form-control1 w-100" placeholder="Share your Best Wishes for our next phase of life."></textarea>
               </div>
-
+              <span className="text-primary-suba">{messagae}</span>
               <div className="submit-area">
                 <button type="submit" className="theme-btn">
                   Submit Now
