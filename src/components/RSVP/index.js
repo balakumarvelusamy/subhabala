@@ -12,8 +12,7 @@ const RSVP = (props) => {
   const [forms, setForms] = useState({
     name: "",
     email: "",
-    address: "",
-    meal: "",
+    wishes: "",
     attend: "",
     guest: "",
   });
@@ -32,6 +31,8 @@ const RSVP = (props) => {
   };
 
   const submitHandler = (e) => {
+    setForms({ ...forms, [e.target.name]: e.target.value });
+    console.log("subarsvp", forms);
     e.preventDefault();
     if (validator.allValid()) {
       validator.hideMessages();
@@ -57,65 +58,43 @@ const RSVP = (props) => {
 
             <form onSubmit={(e) => submitHandler(e)} className="contact-validation-active">
               <div className="form-field">
-                <input value={forms.name} type="text" name="name" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} className="form-control" placeholder="Your Name" />
+                <input value={forms.name} type="text" name="name" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} required className="form-control" placeholder="Your Name" />
                 {validator.message("name", forms.name, "required|alpha_space")}
               </div>
               <div className="form-field">
-                <input value={forms.email} type="email" name="email" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} className="form-control" placeholder="Your Email" />
+                <input value={forms.email} type="email" name="email" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} required className="form-control" placeholder="Your Email" />
                 {validator.message("email", forms.email, "required|email")}
               </div>
-              <div className="radio-buttons">
+              {/* <div className="radio-buttons">
                 <p>
-                  <input type="radio" id="attend" name="radio-group1" />
+                  <input type="radio" id="attend" name="radiogroup1" />
                   <label htmlFor="attend">Yes, I will be there</label>
                 </p>
                 <p>
-                  <input type="radio" id="not" name="radio-group1" />
+                  <input type="radio" id="not" name="radiogroup1" />
                   <label htmlFor="not">Sorry, I can’t come</label>
                 </p>
-              </div>
+              </div> */}
+
               <div className="form-field">
-                <input value={forms.guest} type="number" name="guest" maxlength="100" minlength="1" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} className="form-control" placeholder="Number Of Guests" />
+                <input value={forms.guest} type="number" name="guest" maxLength="10" minLength="1" onBlur={(e) => changeHandler(e)} required onChange={(e) => changeHandler(e)} className="form-control" placeholder="Number Of Guests"></input>
                 {validator.message("guest", forms.guest, "required|number")}
               </div>
-              {/* <div className="form-field ">
-                <input value={forms.attend} type="text" name="attend" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} className="form-control" placeholder="What Will You Be Attending" />
-                {validator.message("attend", forms.attend, "required")}
-              </div> */}
-              <div className="radio-buttons">
-                <p>
-                  <input type="radio" id="reception" name="radio-group" />
-                  <label htmlFor="reception">Reception</label>
-                </p>
-                <p>
-                  <input type="radio" id="marriage" name="radio-group" />
-                  <label htmlFor="marriage">Marriage</label>
-                </p>
-                <p>
-                  <input type="radio" id="both" name="radio-group" />
-                  <label htmlFor="both">Both</label>
-                </p>
+
+              <div className="form-field">
+                I will attend:
+                <select onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} value={forms.meal} type="text" className="form-control" name="attend">
+                  <option></option>
+                  <option value="Reception">Reception, July 4 7:00 PM</option>
+                  <option value="Marriage">Marriage, July 5 9:00 AM</option>
+                  <option value="Both">Both</option>
+                  <option value="No">Sorry, I can’t come.</option>
+                </select>
               </div>
               <div className="form-field">
-                <textarea rows="4" value={forms.wishes} name="wishes" className="form-control" placeholder="Your Best Wishes for our next phase of life."></textarea>
+                <textarea rows="4" value={forms.wishes} name="wishes" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} className="form-control" placeholder="Your Best Wishes for our next phase of life."></textarea>
               </div>
-              {/* <div className="form-field">
-                                <select
-                                    onBlur={(e) => changeHandler(e)}
-                                    onChange={(e) => changeHandler(e)}
-                                    value={forms.meal}
-                                    type="text"
-                                    className="form-control"
-                                    name="meal">
-                                    <option>Meal Preferences</option>
-                                    <option>Chicken Soup</option>
-                                    <option>Motton Kabab</option>
-                                    <option>Chicken BBQ</option>
-                                    <option>Mix Salad</option>
-                                    <option>Beef Ribs </option>
-                                </select>
-                                {validator.message('meal', forms.meal, 'required')}
-                            </div> */}
+
               <div className="submit-area">
                 <button type="submit" className="theme-btn">
                   Submit Now
