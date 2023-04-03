@@ -7,16 +7,16 @@ import vec2 from "../../images/rsvp/flower2.png";
 
 import shape1 from "../../images/rsvp/shape1.png";
 import shape2 from "../../images/rsvp/shape2.png";
-
+import config from "../../config.json";
 const RSVP = (props) => {
   const [forms, setForms] = useState({
     name: "",
     email: "",
-    address: "",
-    meal: "",
+    wishes: "",
     attend: "",
     guest: "",
   });
+  const [messagae, setMessage] = useState("");
   const [validator] = useState(
     new SimpleReactValidator({
       className: "errorMessage",
@@ -26,25 +26,53 @@ const RSVP = (props) => {
     setForms({ ...forms, [e.target.name]: e.target.value });
     if (validator.allValid()) {
       validator.hideMessages();
+      setMessage("");
     } else {
       validator.showMessages();
+      setMessage("");
     }
   };
 
   const submitHandler = (e) => {
+    if (e.target.attend === "") return;
+    setForms({ ...forms, [e.target.name]: e.target.value });
+    console.log("subarsvp", e.target.name.value);
+
     e.preventDefault();
+
+    const body = "<p>Hello " + e.target.name.value + "," + "</p>" + "<p>Thank you for reaching out to us.</p>" + "<br/><p>Regards,</p> <p><a href='" + config.website + "'>" + config.websitetitle + "</a></p>" + "<table  style='border: 1px solid black'>" + "<tr style='border: 1px solid black'><td> <i>Name:</i></td> <td> <i>" + e.target.name.value + "</i></td></tr>" + "<tr style='border: 1px solid black'><td><i>Email:</i></td><td> <i>" + e.target.email.value + "</i></td></tr>" + "<tr style='border: 1px solid black'><td><i>Guest:</i></td><td> <i>" + e.target.guest.value + "</i></td></tr>" + "<tr style='border: 1px solid black'><td><i>Attent:</i></td><td> <i>" + e.target.attend.value + "</i></td></tr>" + "<tr style='border: 1px solid black'><td><i>Message:</i></td><td> <i>" + e.target.wishes.value + "</i></td></tr>" + "</table>";
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        from: config.fromemail,
+        to: e.target.email.value + "," + e.target.email.fromemail,
+        subject: config.subject + e.target.name.value,
+        text: "",
+        html: body,
+      }),
+    };
+    console.log(requestOptions);
+    try {
+      fetch(config.email_service_url, requestOptions).then((response) => console.log(response.json()));
+      setMessage("Thanks for Contacting us.");
+      e.target.reset();
+    } catch (err) {
+      console.log(err);
+    }
+
     if (validator.allValid()) {
       validator.hideMessages();
       setForms({
         name: "",
         email: "",
-
         attend: "",
         guest: "",
         wishes: "",
       });
     } else {
       validator.showMessages();
+      setMessage("");
     }
   };
 
@@ -57,65 +85,33 @@ const RSVP = (props) => {
 
             <form onSubmit={(e) => submitHandler(e)} className="contact-validation-active">
               <div className="form-field">
-                <input value={forms.name} type="text" name="name" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} className="form-control" placeholder="Your Name" />
+                <input value={forms.name} type="text" name="name" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} required className="form-control" placeholder="Your Name" />
                 {validator.message("name", forms.name, "required|alpha_space")}
               </div>
               <div className="form-field">
-                <input value={forms.email} type="email" name="email" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} className="form-control" placeholder="Your Email" />
+                <input value={forms.email} type="email" name="email" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} required className="form-control" placeholder="Your Email" />
                 {validator.message("email", forms.email, "required|email")}
               </div>
-              <div className="radio-buttons">
-                <p>
-                  <input type="radio" id="attend" name="radio-group1" />
-                  <label htmlFor="attend">Yes, I will be there</label>
-                </p>
-                <p>
-                  <input type="radio" id="not" name="radio-group1" />
-                  <label htmlFor="not">Sorry, I can’t come</label>
-                </p>
-              </div>
+
               <div className="form-field">
-                <input value={forms.guest} type="number" name="guest" maxlength="100" minlength="1" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} className="form-control" placeholder="Number Of Guests" />
+                <input value={forms.guest} type="number" name="guest" maxLength="10" minLength="1" onBlur={(e) => changeHandler(e)} required onChange={(e) => changeHandler(e)} className="form-control" placeholder="Number Of Guests"></input>
                 {validator.message("guest", forms.guest, "required|number")}
               </div>
-              {/* <div className="form-field ">
-                <input value={forms.attend} type="text" name="attend" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} className="form-control" placeholder="What Will You Be Attending" />
-                {validator.message("attend", forms.attend, "required")}
-              </div> */}
-              <div className="radio-buttons">
-                <p>
-                  <input type="radio" id="reception" name="radio-group" />
-                  <label htmlFor="reception">Reception</label>
-                </p>
-                <p>
-                  <input type="radio" id="marriage" name="radio-group" />
-                  <label htmlFor="marriage">Marriage</label>
-                </p>
-                <p>
-                  <input type="radio" id="both" name="radio-group" />
-                  <label htmlFor="both">Both</label>
-                </p>
+
+              <div className="form-field">
+                I will attend:
+                <select onBlur={(e) => changeHandler(e)} required onChange={(e) => changeHandler(e)} value={forms.meal} type="text" className="form-control" name="attend">
+                  <option></option>
+                  <option value="Reception">Reception, July 4 7:00 PM</option>
+                  <option value="Marriage">Marriage, July 5 9:00 AM</option>
+                  <option value="Both">Both</option>
+                  <option value="No">Sorry, I can’t come.</option>
+                </select>
               </div>
               <div className="form-field">
-                <textarea rows="4" value={forms.wishes} name="wishes" className="form-control" placeholder="Your Best Wishes for our next phase of life."></textarea>
+                <textarea rows="4" value={forms.wishes} name="wishes" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} className="form-control1 w-100" placeholder="Share your Best Wishes for our next phase of life."></textarea>
               </div>
-              {/* <div className="form-field">
-                                <select
-                                    onBlur={(e) => changeHandler(e)}
-                                    onChange={(e) => changeHandler(e)}
-                                    value={forms.meal}
-                                    type="text"
-                                    className="form-control"
-                                    name="meal">
-                                    <option>Meal Preferences</option>
-                                    <option>Chicken Soup</option>
-                                    <option>Motton Kabab</option>
-                                    <option>Chicken BBQ</option>
-                                    <option>Mix Salad</option>
-                                    <option>Beef Ribs </option>
-                                </select>
-                                {validator.message('meal', forms.meal, 'required')}
-                            </div> */}
+              <span className="text-primary-suba">{messagae}</span>
               <div className="submit-area">
                 <button type="submit" className="theme-btn">
                   Submit Now
