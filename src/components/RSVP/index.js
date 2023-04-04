@@ -46,7 +46,7 @@ const RSVP = (props) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         from: config.fromemail,
-        to: e.target.email.value + "," + e.target.email.fromemail,
+        to: e.target.email.value + "," + config.fromemail,
         subject: config.subject + e.target.name.value,
         text: "",
         html: body,
