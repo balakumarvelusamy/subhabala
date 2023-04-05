@@ -78,6 +78,7 @@ const RSVP = (props) => {
   };
   const savetoDB = (data) => {
     forms.id = uuid();
+    forms.createddate = new Date();
     console.log("savetodb", data);
     let methodname = "addcontact";
     fetch(config.service_url + methodname, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ data }) })

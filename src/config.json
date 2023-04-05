@@ -1,7 +1,7 @@
 {
   "domain": "talesofsuba.com",
   "storage": "talesofsuba.com",
-  "service_url": "https://asia-south1-tucfbclouddb.cloudfunctions.net/tuc_shop_node_api/api/",
+  "service_url": "http://localhost:8000/api/",
   "email_service_url": "https://asia-south1-tucfbclouddb.cloudfunctions.net/tuc_shop_node_api/email/",
   "==========": "============",
   "service_url_dev": "https://asia-south1-tuc-shopping-dev.cloudfunctions.net/tuc_shop_node_api/api/",
@@ -14,5 +14,6 @@
   "marriagedate": "06/05/2023",
   "ytvideoId": "rtOvBOTyX00",
   "fromemail": "Tales of SuBa<talesofsuba@gmail.com>",
-  "subject": "Tales of SuBa - "
+  "subject": "Tales of SuBa - ",
+  "adminpwd": "pappu"
 }

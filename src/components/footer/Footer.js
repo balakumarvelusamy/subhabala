@@ -19,7 +19,7 @@ const Footer = (props) => {
               <div className="widget about-widget">
                 <div className="widget-title">
                   <Link onClick={ClickHandler} className="logo" to="/">
-                    <small>My</small>love
+                    <small>My</small> Tales of Suba
                     <span>
                       <i className="fi flaticon-dove"></i>
                     </span>
@@ -124,7 +124,12 @@ const Footer = (props) => {
                 <Link className="d-none" onClick={ClickHandler} to="https://instagram.com/theuniquecreations">
                   <i>Contact: The Unique Creations</i>
                 </Link>
+                <br />
               </p>
+              <br />
+              <Link className="small text-dark" to="/admin">
+                <i>Admin Log in</i>
+              </Link>
             </div>
           </div>
         </div>
