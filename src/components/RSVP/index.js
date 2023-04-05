@@ -4,7 +4,7 @@ import SectionTitle from "../../components/SectionTitle";
 
 import vec1 from "../../images/rsvp/flower1.png";
 import vec2 from "../../images/rsvp/flower2.png";
-
+import uuid from "react-uuid";
 import shape1 from "../../images/rsvp/shape1.png";
 import shape2 from "../../images/rsvp/shape2.png";
 import config from "../../config.json";
@@ -56,6 +56,7 @@ const RSVP = (props) => {
     try {
       fetch(config.email_service_url, requestOptions).then((response) => console.log(response.json()));
       setMessage("Thanks for Contacting us.");
+      savetoDB(forms);
       e.target.reset();
     } catch (err) {
       console.log(err);
@@ -74,6 +75,22 @@ const RSVP = (props) => {
       validator.showMessages();
       setMessage("");
     }
+  };
+  const savetoDB = (data) => {
+    forms.id = uuid();
+    console.log("savetodb", data);
+    let methodname = "addcontact";
+    fetch(config.service_url + methodname, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ data }) })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("regitered user", data);
+        if (data.status === 200) {
+          setMessage("Thanks for Contacting us....");
+        } else {
+          setMessage("");
+        }
+      })
+      .catch((err) => {});
   };
 
   return (
