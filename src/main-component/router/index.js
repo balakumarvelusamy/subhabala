@@ -14,7 +14,7 @@ import GalleryPage from "../GalleryPage/GalleryPage";
 import GalleryPage2 from "../GalleryPage2/GalleryPage2";
 import GallerySlide from "../GallerySlide/GallerySlide";
 import RSVPPage from "../RSVPPage/RSVPPage";
-import StoryPage from "../StoryPage/StoryPage";
+import AdminPage from "../AdminPage/AdminPage";
 import AccomodationPage from "../AccomodationPage/AccomodationPage";
 import EventPage from "../EventPage/EventPage";
 import BrideGroomPage from "../BrideGroomPage/BrideGroomPage";
@@ -38,8 +38,13 @@ const AllRoute = () => {
           <Route path="/" element={<SubaHomePage6 />} />
           <Route path="home" element={<SubaHomePage6 />} />
           <Route path="invitation" element={<InvitationPage />} />
+
+          <Route path="admin" element={<AdminPage />} />
+
           <Route path="*" element={<ErrorPage />} />
-          {/* <Route path="home2" element={<Homepage2 />} />
+          {/*  <Route path="login" element={<LoginPage />} />
+          <Route path="register" element={<SignUpPage />} />
+          <Route path="home2" element={<Homepage2 />} />
           <Route path="home3" element={<HomePage3 />} />
           <Route path="home4" element={<HomePage4 />} />
           <Route path="home5" element={<HomePage5 />} />
@@ -64,7 +69,7 @@ const AllRoute = () => {
           <Route path="blog" element={<BlogPage />} />
           <Route path="blog-left-sidebar" element={<BlogPageLeft />} />
           <Route path="blog-fullwidth" element={<BlogPageFullwidth />} />
-          <Route path="login" element={<LoginPage />} />
+          
           <Route path="register" element={<SignUpPage />} />
           <Route path="forgot-password" element={<ForgotPassword />} /> */}
         </Routes>
