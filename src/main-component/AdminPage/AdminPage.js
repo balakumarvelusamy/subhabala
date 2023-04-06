@@ -37,7 +37,7 @@ const AdminPage = () => {
       <Navbar2 />
       <PageTitle pageTitle={"Admin"} pagesub={"Admin"} />
 
-      {!show ? (
+      {show ? (
         <Admin />
       ) : (
         <Grid className="loginWrapper">
