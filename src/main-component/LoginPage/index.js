@@ -7,6 +7,7 @@ import Button from "@material-ui/core/Button";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import { Link, useNavigate } from "react-router-dom";
+import config from "../../config.json";
 
 import "./style.scss";
 
@@ -48,7 +49,7 @@ const LoginPage = (props) => {
       const username = value.username;
       const password = value.password;
 
-      if (username === "pappu" && password === "pappu") {
+      if (username === config.adminusername && password === config.adminpwd) {
         toast.success("successfully Login on Tales Of Suba!");
         push("/admin");
       }

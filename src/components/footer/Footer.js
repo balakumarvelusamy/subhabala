@@ -127,7 +127,7 @@ const Footer = (props) => {
                 <br />
               </p>
               <br />
-              <Link className="small text-dark" to="/admin">
+              <Link className="small text-dark" to="/login">
                 <i>Admin Log in</i>
               </Link>
             </div>
