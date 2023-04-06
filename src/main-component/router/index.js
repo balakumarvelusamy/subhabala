@@ -38,11 +38,11 @@ const AllRoute = () => {
           <Route path="/" element={<SubaHomePage6 />} />
           <Route path="home" element={<SubaHomePage6 />} />
           <Route path="invitation" element={<InvitationPage />} />
-
+          <Route path="login" element={<LoginPage />} />
           <Route path="admin" element={<AdminPage />} />
 
           <Route path="*" element={<ErrorPage />} />
-          {/*  <Route path="login" element={<LoginPage />} />
+          {/* 
           <Route path="register" element={<SignUpPage />} />
           <Route path="home2" element={<Homepage2 />} />
           <Route path="home3" element={<HomePage3 />} />
