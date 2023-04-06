@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from "react";
 import Footer from "../../components/footer/Footer";
-import Navbar2 from "../../components/Navbar2";
+import Navbar from "../../components/Navbar";
 import PageTitle from "../../components/pagetitle";
 import PartnerSection from "../../components/PartnerSection/PartnerSection";
 import PortfolioSection from "../../components/PortfolioSection/PortfolioSection";
@@ -34,7 +34,7 @@ const AdminPage = () => {
   };
   return (
     <Fragment>
-      <Navbar2 />
+      <Navbar />
       <PageTitle pageTitle={"Admin"} pagesub={"Admin"} />
 
       {show ? (
