@@ -7,6 +7,7 @@ import pimg2 from "../../images/partners/1makeup.png";
 import pimg3 from "../../images/partners/1gt.png";
 import pimg4 from "../../images/partners/1mahal.png";
 import pimg5 from "../../images/partners/tuclogo.png";
+import pimg6 from "../../images/partners/1decor.png";
 import SectionTitle from "../SectionTitle";
 const partners = [
   {
@@ -25,6 +26,12 @@ const partners = [
   {
     pImg: pimg1,
   },
+  {
+    pImg: pimg5,
+  },
+  {
+    pImg: pimg6,
+  },
 ];
 
 const PartnerSection = (props) => {
@@ -32,7 +39,7 @@ const PartnerSection = (props) => {
     dots: false,
     arrows: false,
     speed: 1000,
-    slidesToShow: 5,
+    slidesToShow: 6,
     slidesToScroll: 1,
     autoplay: true,
     responsive: [
