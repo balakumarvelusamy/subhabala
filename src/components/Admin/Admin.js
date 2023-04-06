@@ -144,7 +144,7 @@ const Admin = (props) => {
       },
 
       {
-        label: "Guest/Attend",
+        label: "Attend/Guest",
         field: "attend",
         sort: "disabled",
         width: 150,
@@ -166,7 +166,7 @@ const Admin = (props) => {
         email: ie.email,
         attend: (
           <p className="small">
-            {ie.guest}/{ie.attend}
+            {ie.attend}/{ie.guest}
           </p>
         ),
         wishes: <p className="small">{ie.wishes}</p>,
