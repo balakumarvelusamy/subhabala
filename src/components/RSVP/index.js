@@ -24,18 +24,11 @@ const RSVP = (props) => {
   );
   const changeHandler = (e) => {
     setForms({ ...forms, [e.target.name]: e.target.value });
-    if (validator.allValid()) {
-      validator.hideMessages();
-      setMessage("");
-    } else {
-      validator.showMessages();
-      setMessage("");
-    }
   };
 
   const submitHandler = (e) => {
-    if (e.target.attend === "") return;
     setForms({ ...forms, [e.target.name]: e.target.value });
+
     console.log("subarsvp", e.target.name.value);
 
     e.preventDefault();
@@ -79,6 +72,9 @@ const RSVP = (props) => {
   const savetoDB = (data) => {
     forms.id = uuid();
     forms.createddate = new Date();
+    if (data.attend == "No") {
+      forms.guest = 0;
+    }
     console.log("savetodb", data);
     let methodname = "addcontact";
     fetch(config.service_url + methodname, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ data }) })
@@ -104,16 +100,9 @@ const RSVP = (props) => {
             <form onSubmit={(e) => submitHandler(e)} className="contact-validation-active">
               <div className="form-field">
                 <input value={forms.name} type="text" name="name" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} required className="form-control" placeholder="Your Name" />
-                {validator.message("name", forms.name, "required|alpha_space")}
               </div>
               <div className="form-field">
                 <input value={forms.email} type="email" name="email" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} required className="form-control" placeholder="Your Email" />
-                {validator.message("email", forms.email, "required|email")}
-              </div>
-
-              <div className="form-field">
-                <input value={forms.guest} type="number" name="guest" maxLength="10" minLength="1" onBlur={(e) => changeHandler(e)} required onChange={(e) => changeHandler(e)} className="form-control" placeholder="Number Of Guests"></input>
-                {validator.message("guest", forms.guest, "required|number")}
               </div>
 
               <div className="form-field">
@@ -126,6 +115,11 @@ const RSVP = (props) => {
                   <option value="No">Sorry, I can’t come.</option>
                 </select>
               </div>
+
+              <div className={forms.attend != "No" ? "form-field" : "d-none"}>
+                <input value={forms.attend == "No" ? 0 : forms.guest} type="number" name="guest" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} maxLength="10" minLength="1" className="form-control" placeholder="Number Of Guests"></input>
+              </div>
+
               <div className="form-field">
                 <textarea rows="4" value={forms.wishes} name="wishes" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} className="form-control1 w-100" placeholder="Share your Best Wishes for our next phase of life."></textarea>
               </div>
