@@ -8,13 +8,13 @@
   "service_url_local": "http://localhost:8000/api/",
   "service_url_prod": "https://asia-south1-tucfbclouddb.cloudfunctions.net/tuc_shop_node_api/api/",
   "website": "https://talesofsuba.com",
-  "websitetitle": "TalesofSuBa.com",
+  "websitetitle": "TalesofSuBa",
   "ytlivelink": "",
   "logo": "",
   "marriagedate": "06/05/2023",
   "ytvideoId": "-JdTfeh4p7E",
   "fromemail": "Tales of SuBa<talesofsuba@gmail.com>",
-  "subject": "Tales of SuBa - ",
+  "subject": "RSVP for SuBa's Magical Ceremony - ",
   "adminpwd": "pappu",
   "adminusername": "pappu"
 }
