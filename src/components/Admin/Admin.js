@@ -8,7 +8,7 @@ import shape1 from "../../images/story/shape-1.png";
 import shape2 from "../../images/story/shape-2.png";
 import { alpha } from "@material-ui/core/styles";
 
-// import MaterialTable from "material-table";
+//import MaterialTable from "material-table";
 import { MDBDataTableV5 } from "mdbreact";
 
 const Admin = (props) => {
