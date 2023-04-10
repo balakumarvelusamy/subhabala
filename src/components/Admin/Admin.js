@@ -21,7 +21,7 @@ const Admin = (props) => {
       .then((response) => response.json())
       .then((data) => {
         {
-          setContact(data);
+          setContact(data.filter((_d) => _d.isactive === 1));
           console.log("contact", data);
         }
       })

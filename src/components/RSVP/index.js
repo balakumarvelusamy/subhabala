@@ -17,6 +17,7 @@ const RSVP = (props) => {
     guest: "",
   });
   const [messagae, setMessage] = useState("");
+  const [inputText, setInputText] = useState(0);
   const [validator] = useState(
     new SimpleReactValidator({
       className: "errorMessage",
@@ -24,6 +25,8 @@ const RSVP = (props) => {
   );
   const changeHandler = (e) => {
     setForms({ ...forms, [e.target.name]: e.target.value });
+    setMessage("");
+    setInputText(forms.wishes);
   };
 
   const submitHandler = (e) => {
@@ -75,6 +78,7 @@ const RSVP = (props) => {
     if (data.attend == "No") {
       forms.guest = 0;
     }
+    forms.isactive = 1;
     console.log("savetodb", data);
     let methodname = "addcontact";
     fetch(config.service_url + methodname, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ data }) })
@@ -99,10 +103,10 @@ const RSVP = (props) => {
 
             <form onSubmit={(e) => submitHandler(e)} className="contact-validation-active">
               <div className="form-field">
-                <input value={forms.name} type="text" name="name" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} required className="form-control" placeholder="Your Name" />
+                <input value={forms.name} type="text" maxLength="40" name="name" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} required className="form-control" placeholder="Your Name" />
               </div>
               <div className="form-field">
-                <input value={forms.email} type="email" name="email" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} required className="form-control" placeholder="Your Email" />
+                <input value={forms.email} type="email" maxLength="40" name="email" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} required className="form-control" placeholder="Your Email" />
               </div>
 
               <div className="form-field">
@@ -117,12 +121,24 @@ const RSVP = (props) => {
               </div>
 
               <div className={forms.attend != "No" ? "form-field" : "d-none"}>
-                <input value={forms.attend == "No" ? 0 : forms.guest} type="number" name="guest" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} maxLength="10" minLength="1" className="form-control" placeholder="Number Of Guests"></input>
+                {/* <input value={forms.attend == "No" ? 0 : forms.guest} type="number" name="guest" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} maxLength="10" minLength="1" className="form-control" placeholder="Number Of Guests"></input> */}
+                No of Guest:
+                <select onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} value={forms.attend == "No" ? 0 : forms.guest.value} required type="text" className="form-control" name="guest">
+                  <option value=""></option>
+                  {forms.attend == "No" ? <option value="0">0</option> : ""}
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
               </div>
 
               <div className="form-field">
-                <textarea rows="4" value={forms.wishes} name="wishes" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} className="form-control1 w-100" placeholder="Share your Best Wishes for our next phase of life."></textarea>
+                <textarea rows="4" maxLength="500" value={forms.wishes} required name="wishes" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} className="form-control1 w-100" placeholder="Share your Best Wishes for our next phase of life."></textarea>
+                <span className="small">Max {inputText.length + 1}/500 characters</span>
               </div>
+
               <span className="text-primary-suba">{messagae}</span>
               <div className="submit-area">
                 <button type="submit" className="theme-btn">
