@@ -27,7 +27,7 @@ const CoupleSection = (props) => {
                   </div>
                   <div className="col-lg-7">
                     <div className="couple-text">
-                      <h3>BalaKumar</h3>
+                      <h3 className="text-primary-suba">BalaKumar</h3>
                       <p>
                         <b>A Man Who is a Software Engineer by Profession and a Passionate Photographer by heart who has found his Eternal Love in his passion and Hopefully Subha finds a way to fit in Bala’s cute little World!!</b>
                       </p>
@@ -57,7 +57,7 @@ const CoupleSection = (props) => {
                 <div className="row align-items-center">
                   <div className="col-lg-7 order-lg-1 order-2">
                     <div className="couple-text">
-                      <h3>Subha Swetha</h3>
+                      <h3 className="text-primary-suba">Subha Swetha</h3>
                       <p>
                         <b>A Girl Who is a Software Engineer By Profession and a Passionate Badminton Player by heart and who has found her Eternal Love in Solitude and Hopefully Bala paves a way to fit in Subha’s beautiful and happy life!!</b>
                       </p>
