@@ -3,6 +3,7 @@ import Navbar2 from "../../components/Navbar2";
 import Hero6 from "../../components/hero6/Hero6";
 import Scrollbar from "../../components/scrollbar";
 import CoupleSection from "../../components/CoupleSection/CoupleSection";
+import SectionTitle from "../../components/SectionTitle";
 import VideoSection from "../../components/VideoSection";
 import StorySection from "../../components/StorySection/StorySection";
 import PortfolioSection from "../../components/PortfolioSection/PortfolioSection";
@@ -19,6 +20,7 @@ const SubaHomePage6 = () => {
     <Fragment>
       <Navbar2 />
       <Hero6 />
+      <SectionTitle Name={"green"} MainTitle={"Destiny Brought Us Together 🤝 & Now, Your blessings & Our Love will seal the bond forever ♾️ ❤️‍🔥"} className="p-1" />
       <CoupleSection />
       <VideoSection />
       <StorySection />
