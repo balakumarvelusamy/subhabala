@@ -7,7 +7,7 @@ import PortfolioSection from "../../components/PortfolioSection/PortfolioSection
 import Scrollbar from "../../components/scrollbar";
 import Admin from "../../components/Admin/Admin";
 import VideoSection from "../../components/VideoSection";
-import Grid from "@material-ui/core/Grid";
+//import Grid from "@material-ui/core/Grid";
 import SimpleReactValidator from "simple-react-validator";
 import { toast } from "react-toastify";
 import TextField from "@material-ui/core/TextField";
@@ -40,34 +40,33 @@ const AdminPage = () => {
       {show ? (
         <Admin />
       ) : (
-        <Grid className="loginWrapper">
-          <Grid className="loginForm">
+        <div className="loginWrapper">
+          <div className="loginForm">
             <form onSubmit={submitForm}>
-              <Grid item xs={12}>
-                <TextField
-                  className="inputOutline"
-                  fullWidth
-                  placeholder="Password"
-                  value={value.password}
-                  variant="outlined"
-                  name="password"
-                  type="password"
-                  label=""
-                  InputLabelProps={{
-                    shrink: true,
-                  }}
-                  onBlur={(e) => changeHandler(e)}
-                  onChange={(e) => changeHandler(e)}
-                />
-              </Grid>
-              <Grid className="formFooter">
+              <TextField
+                className="inputOutline"
+                fullWidth
+                placeholder="Password"
+                value={value.password}
+                variant="outlined"
+                name="password"
+                type="password"
+                label=""
+                InputLabelProps={{
+                  shrink: true,
+                }}
+                onBlur={(e) => changeHandler(e)}
+                onChange={(e) => changeHandler(e)}
+              />
+
+              <div className="formFooter">
                 <Button fullWidth className="cBtnTheme  " type="submit">
                   Login
                 </Button>
-              </Grid>
+              </div>
             </form>
-          </Grid>{" "}
-        </Grid>
+          </div>{" "}
+        </div>
       )}
       <Footer />
       <Scrollbar />
