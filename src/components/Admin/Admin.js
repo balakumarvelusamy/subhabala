@@ -142,7 +142,7 @@ const Admin = (props) => {
   };
 
   return (
-    <section className="story-section section-padding" id="story">
+    <section className="p-2 story-section section-padding" id="story">
       <div className="container">
         <div className="row p-1">
           <SectionTitle MainTitle={"RSVP"} />
