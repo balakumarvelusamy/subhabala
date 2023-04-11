@@ -46,6 +46,9 @@ const Hero4 = (props) => {
                   <img src={invitefooter} />
                 </div>
               </div>
+              <div align="center" className="p-3">
+                <LocationMap />
+              </div>
             </div>
           </div>
         </div>
