@@ -9,7 +9,7 @@ import shape2 from "../../images/rsvp/shape2.png";
 
 const StorySection = (props) => {
   return (
-    <section className="story-section section-padding" id="story">
+    <section className="p-2 story-section section-padding" id="story">
       <div className="container">
         <div className="row">
           <SectionTitle MainTitle={"Our Sweet Story"} />
@@ -40,7 +40,9 @@ const StorySection = (props) => {
                           <div className="inner-ball"></div>
                         </div>
                       </div>
-                      <p>Our first meet was virtual and it was totally arranged by our parents. We actually think of it as destiny! We just had a normal conversation about how everything was going on with our lives, and most of the conversation was filled with <span className="text-primary-suba">"Vadivel Sir"</span> dialogues. I realized how funny we can be together!</p>
+                      <p>
+                        Our first meet was virtual and it was totally arranged by our parents. We actually think of it as destiny! We just had a normal conversation about how everything was going on with our lives, and most of the conversation was filled with <span className="text-primary-suba">"Vadivel Sir"</span> dialogues. I realized how funny we can be together!
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -56,7 +58,9 @@ const StorySection = (props) => {
                           <div className="inner-ball"></div>
                         </div>
                       </div>
-                      <p>After a month of long conversations, we planned for an official meet. Bala literally flew back from the US to India, despite his work and health conditions, enduring the <span className="text-primary-suba">"36-hour-long flight journey"</span>, just to meet me. He made me realize that he is the one promising partner!</p>
+                      <p>
+                        After a month of long conversations, we planned for an official meet. Bala literally flew back from the US to India, despite his work and health conditions, enduring the <span className="text-primary-suba">"36-hour-long flight journey"</span>, just to meet me. He made me realize that he is the one promising partner!
+                      </p>
                     </div>
                   </div>
                   <div className="col col-lg-6 col-12 order-lg-2 order-1">

@@ -90,7 +90,7 @@ const PartnerSection = (props) => {
     <section id="partners" className={`wpo-partners-section ${props.pClass}`}>
       <SectionTitle MainTitle={"Our Partners"} />
       <div align="center" className="small p-1">
-        {config.footerquote1}
+        <div dangerouslySetInnerHTML={{ __html: config.footerquote1 }} />
       </div>
       <div align="center" className="small p-1">
         {config.footerquote2}

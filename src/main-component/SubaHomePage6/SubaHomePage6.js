@@ -21,7 +21,7 @@ const SubaHomePage6 = () => {
       <Navbar2 />
       <Hero6 />
       <div align="center" className="p-4 mb-2">
-        <h3>Destiny Brought Us Together & Now, Your blessings & Our Love will seal the bond forever!!</h3>
+        <h3>Destiny Brought Us Together & Now, Your blessings & Our Love will seal the bond forever 🧿</h3>
       </div>
       <CoupleSection />
       <div align="center">

@@ -32,7 +32,7 @@ const CoupleSection = (props) => {
                         <b>A Man Who is a Software Engineer by profession & a Passionate Photographer at heart, who has found his eternal love in his passion. Hopefully, Subha finds a way to fit in Bala’s cute little World!</b>
                       </p>
                       <p>
-                        <b>From the Subha’s POV :</b> Bala is a very creative, pure, passionate & caring soul often misunderstood for his words that come straight from the heart. His warm smile and compassionate heart radiate love and kindness, and he has a way of making everyone feel seen and valued. That made my heart skip a beat, and I am so proud & lucky to have him as a partner for life!!! <br />
+                        <b>From Subha’s POV :</b> Bala is a very creative, pure, passionate & caring soul often misunderstood for his words that come straight from the heart. His warm smile and compassionate heart radiate love and kindness, and he has a way of making everyone feel seen and valued. That made my heart skip a beat, and I am so proud & lucky to have him as a partner for life!!! <br />
                       </p>{" "}
                       <p>
                         <b>Things that Bala is Great at:</b> cooking, gardening(awesome right?), painting (my most favourite thing), being funny(yes, Sometimes..LOL🤪)

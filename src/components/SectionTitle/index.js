@@ -4,7 +4,7 @@ const SectionTitle = (props) => {
   return (
     <>
       {props.Name != "green" ? (
-        <div className="wpo-section-title">
+        <div className="wpo-section-title mb-2">
           <div className="section-title-icon">
             <i className="fi flaticon-dove"></i>
           </div>
