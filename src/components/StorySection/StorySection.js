@@ -40,7 +40,7 @@ const StorySection = (props) => {
                           <div className="inner-ball"></div>
                         </div>
                       </div>
-                      <p>Our First Meet was a Virtual which was “Totally Arranged by Parents” & We actually think of it as a “Destiny”!!! We just had a normal conversation of how everything was going on with our lives and most of the conversation our filled with “Vadivel Sir” dialogues and I realized how funny we can be together!!</p>
+                      <p>Our first meet was virtual and it was totally arranged by our parents. We actually think of it as destiny! We just had a normal conversation about how everything was going on with our lives, and most of the conversation was filled with <span className="text-primary-suba">"Vadivel Sir"</span> dialogues. I realized how funny we can be together!</p>
                     </div>
                   </div>
                 </div>
@@ -56,7 +56,7 @@ const StorySection = (props) => {
                           <div className="inner-ball"></div>
                         </div>
                       </div>
-                      <p>After a Month of Long Conversations, We Planned for the official meet. Bala, Just literally Flew back from US to India wherein he had to go through the 36 hours long flight Journey despite of his work and health conditions and he did all of this to make sure to meet me and made me realize that he is the one promising partner!</p>
+                      <p>After a month of long conversations, we planned for an official meet. Bala literally flew back from the US to India, despite his work and health conditions, enduring the <span className="text-primary-suba">"36-hour-long flight journey"</span>, just to meet me. He made me realize that he is the one promising partner!</p>
                     </div>
                   </div>
                   <div className="col col-lg-6 col-12 order-lg-2 order-1">
@@ -89,7 +89,7 @@ const StorySection = (props) => {
                         </div>
                       </div>
                       <p>
-                        The day I met Subha is the day She officially Said “Yes” and She went on to Quote Saying that <span className="text-primary-suba">“Love, Life, Time have chosen us to be together” </span>and I felt that and there is no looking back since then 😊 and One month later we got engaged officially on 1st Feb 2023 and from there on, it’s your countless blessings keeping us safe and happy together forever!
+                        The day I met Subha was the day she officially said 'Yes', and she went on to say that <span className="text-primary-suba">“Love, Life, Time have chosen us to be together” </span>I felt that, and there has been no looking back since then 😊. One month later, we officially got engaged on 1st February 2023, and from there on, it's been your countless blessings keeping us safe and happy together forever!
                       </p>
                     </div>
                   </div>
