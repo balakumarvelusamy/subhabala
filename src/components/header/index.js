@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import MobileMenu2 from "../MobileMenu2/MobileMenu2";
+import home from "../../images/hero/home.png";
 
 const Header2 = (props) => {
   const ClickHandler = () => {
@@ -37,7 +38,7 @@ const Header2 = (props) => {
                     <i className="ti-close"></i>
                   </button>
                   <ul className="nav navbar-nav mb-2 mb-lg-0">
-                    <li className="menu-item-has-children">
+                    <li className="menu-item-has-children d-none">
                       <Link to="/home">Home</Link>
                       <ul className="sub-menu d-none">
                         <li>
@@ -230,7 +231,8 @@ const Header2 = (props) => {
                   <Link className="theme-btn" onClick={ClickHandler} to="/home">
                     <span className="text"> Home</span>{" "}
                     <span className="mobile">
-                      <i className="fi flaticon-user"></i>
+                      {/* <i class="fi fi-ss-home"></i> */}
+                      <img src={home} />
                     </span>
                   </Link>
                 </div>

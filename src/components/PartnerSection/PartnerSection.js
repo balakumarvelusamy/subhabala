@@ -87,7 +87,7 @@ const PartnerSection = (props) => {
   };
 
   return (
-    <section className={`wpo-partners-section ${props.pClass}`}>
+    <section id="partners" className={`wpo-partners-section ${props.pClass}`}>
       <SectionTitle MainTitle={"Our Partners"} />
       <div align="center" className="small p-1">
         {config.footerquote1}

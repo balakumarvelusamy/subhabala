@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
 import MobileMenu from "../MobileMenu/MobileMenu";
-
+import invite from "../../images/hero/invite.png";
 const Header = (props) => {
   const ClickHandler = () => {
     window.scrollTo(10, 0);
@@ -102,13 +102,13 @@ const Header = (props) => {
                     </li>
 
                     <li>
-                      <Link activeClass="active" to="event" spy={true} smooth={true} duration={500}>
-                        Venue
+                      <Link activeClass="active" to="gallery" spy={true} smooth={true} duration={500}>
+                        Gallery
                       </Link>
                     </li>
                     <li>
-                      <Link activeClass="active" to="gallery" spy={true} smooth={true} duration={500}>
-                        Gallery
+                      <Link activeClass="active" to="partners" spy={true} smooth={true} duration={500}>
+                        Partners
                       </Link>
                     </li>
                     <li className="menu-item-has-children d-none">
@@ -163,7 +163,8 @@ const Header = (props) => {
                   <NavLink className="theme-btn" onClick={ClickHandler} to="/invitation">
                     <span className="text"> Invitation & RSVP</span>{" "}
                     <span className="mobile">
-                      <i className="fi flaticon-user"></i>
+                      {/* <i className="fi flaticon-user"></i> */}
+                      <img src={invite} />
                     </span>
                   </NavLink>
                 </div>
