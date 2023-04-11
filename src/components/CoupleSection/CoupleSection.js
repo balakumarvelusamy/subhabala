@@ -10,7 +10,7 @@ import shape4 from "../../images/couple/shape-4.png";
 
 const CoupleSection = (props) => {
   return (
-    <section className={`couple-section section-padding ${props.cClass}`} id="couple">
+    <section className={`couple-section p-1 section-padding ${props.cClass}`} id="couple">
       <div className="container">
         <div className="row align-items-center justify-content-center">
           <div className="col col-lg-11">

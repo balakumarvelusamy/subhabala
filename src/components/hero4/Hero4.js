@@ -2,15 +2,17 @@ import React from "react";
 import LocationMap from "../Modal";
 import shape1 from "../../images/slider/flower1.png";
 import shape2 from "../../images/slider/flower2.png";
+import invite from "../../images/wedding/invitation.jpg";
+import invitefooter from "../../images/wedding/invitefooter.jpg";
 
 const Hero4 = (props) => {
   return (
-    <section className="static-hero-s3">
-      <div className="hero-container">
-        <div className="hero-inner">
-          <div className="container">
+    <section className="static-hero-s31">
+      <div className="hero-container1">
+        <div className="hero-inner1 ">
+          <div className="container1">
             <div className="row justify-content-center">
-              <div className="col-lg-6">
+              <div className="col-lg-6 d-none">
                 <div className="wpo-event-item">
                   <div className="wpo-event-text">
                     <h2>Subha & Bala</h2>
@@ -36,6 +38,12 @@ const Hero4 = (props) => {
                   <div className="shape-2">
                     <img src={shape2} alt="" />
                   </div>
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <div className="wpo-event-item p-2 shadow">
+                  <img src={invite} />
+                  <img src={invitefooter} />
                 </div>
               </div>
             </div>
