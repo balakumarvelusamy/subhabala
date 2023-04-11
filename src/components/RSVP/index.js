@@ -99,7 +99,7 @@ const RSVP = (props) => {
       <div className="container">
         <div className="wpo-contact-section-wrapper">
           <div className="wpo-contact-form-area">
-            <SectionTitle MainTitle={"Are you attending?"} />
+            <SectionTitle MainTitle={"Send Us your Wishes"} />
 
             <form onSubmit={(e) => submitHandler(e)} className="contact-validation-active">
               <div className="form-field">

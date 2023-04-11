@@ -27,7 +27,7 @@ const brideGrooms = [
   {
     id: "3",
     tImg: suve,
-    name: "Swetha",
+    name: "Suvetha",
     title: "Groom's Cousin",
   },
 ];
