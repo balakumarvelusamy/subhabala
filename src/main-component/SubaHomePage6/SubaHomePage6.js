@@ -20,13 +20,17 @@ const SubaHomePage6 = () => {
     <Fragment>
       <Navbar2 />
       <Hero6 />
-      <SectionTitle Name={"green"} MainTitle={"Destiny Brought Us Together 🤝 & Now, Your blessings & Our Love will seal the bond forever ♾️ ❤️‍🔥"} className="p-1" />
+      <div align="center" className="p-4 mb-2">
+        <h3>Destiny Brought Us Together 🤝 & Now, Your blessings & Our Love will seal the bond forever ♾️ ❤️‍🔥</h3>
+      </div>
       <CoupleSection />
+      <div align="center">
+        <h1>Our Engagement Video</h1>
+      </div>
       <VideoSection />
       <StorySection />
       <CtaSection />
       <PortfolioSection />
-
       <BrideGrooms />
       <EventSection />
       <Gallery />

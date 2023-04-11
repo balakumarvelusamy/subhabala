@@ -8,11 +8,13 @@ import pimg3 from "../../images/partners/1gt.png";
 import pimg4 from "../../images/partners/1mahal.png";
 import pimg5 from "../../images/partners/tuclogo.png";
 import pimg6 from "../../images/partners/1decor.png";
+import pimg7 from "../../images/partners/1.png";
 import SectionTitle from "../SectionTitle";
+import config from "../../config.json";
 const partners = [
   {
     pImg: pimg5,
-    link: "https://www.instagram.com/theuniquecreations",
+    link: "https://www.theuniquecreations.com",
   },
   {
     pImg: pimg2,
@@ -21,14 +23,17 @@ const partners = [
     pImg: pimg3,
   },
   {
+    pImg: pimg7,
+    link: "https://www.seedballs.in",
+  },
+  {
     pImg: pimg4,
   },
   {
     pImg: pimg1,
+    link: "https://zerogravity.photography/",
   },
-  {
-    pImg: pimg5,
-  },
+
   {
     pImg: pimg6,
   },
@@ -53,14 +58,14 @@ const PartnerSection = (props) => {
       {
         breakpoint: 1200,
         settings: {
-          slidesToShow: 5,
+          slidesToShow: 6,
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 991,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 5,
           slidesToScroll: 1,
         },
       },
@@ -84,6 +89,12 @@ const PartnerSection = (props) => {
   return (
     <section className={`wpo-partners-section ${props.pClass}`}>
       <SectionTitle MainTitle={"Our Partners"} />
+      <div align="center" className="small p-1">
+        {config.footerquote1}
+      </div>
+      <div align="center" className="small p-1">
+        {config.footerquote2}
+      </div>
       <div className="container">
         <div className="row">
           <div className="col col-xs-12">

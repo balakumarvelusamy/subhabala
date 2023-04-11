@@ -136,7 +136,7 @@ const RSVP = (props) => {
 
               <div className="form-field">
                 <textarea rows="4" maxLength="500" value={forms.wishes} required name="wishes" onBlur={(e) => changeHandler(e)} onChange={(e) => changeHandler(e)} className="form-control1 w-100" placeholder="Kindly Share your Best Wishes for the next phase of our life."></textarea>
-                <span className="small">Max {inputText.length + 1}/500 characters</span>
+                <span className="small">Max {forms.wishes.length === 0 ? 0 : inputText.length + 1}/500 characters</span>
               </div>
 
               <span className="text-primary-suba">{messagae}</span>
