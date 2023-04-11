@@ -3,6 +3,7 @@ import SectionTitle from "../SectionTitle";
 import timg1 from "../../images/team/sanju.jpg";
 import timg2 from "../../images/team/van.jpg";
 import timg3 from "../../images/team/aravind.jpg";
+import suve from "../../images/team/suve.jpg";
 import timg4 from "../../images/team/img-4.jpg";
 import timg5 from "../../images/team/img-5.jpg";
 import timg6 from "../../images/team/img-6.jpg";
@@ -25,9 +26,9 @@ const brideGrooms = [
   },
   {
     id: "3",
-    tImg: timg3,
-    name: "Aravind",
-    title: "Groom's Brother",
+    tImg: suve,
+    name: "Swetha",
+    title: "Groom's Cousin",
   },
 ];
 

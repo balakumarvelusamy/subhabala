@@ -32,7 +32,7 @@ const SubaHomePage6 = () => {
       <CtaSection />
       <PortfolioSection />
       <BrideGrooms />
-      <EventSection />
+      {/* <EventSection /> */}
       <Gallery />
       <PartnerSection />
       {/* <BlogSection /> */}
