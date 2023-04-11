@@ -1,0 +1,22 @@
+{
+  "domain": "talesofsuba.com",
+  "storage": "talesofsuba.com",
+  "service_url": "https://asia-south1-tucfbclouddb.cloudfunctions.net/tuc_shop_node_api/api/",
+  "email_service_url": "https://asia-south1-tucfbclouddb.cloudfunctions.net/tuc_shop_node_api/email/",
+  "==========": "============",
+  "service_url_dev": "https://asia-south1-tuc-shopping-dev.cloudfunctions.net/tuc_shop_node_api/api/",
+  "service_url_local": "http://localhost:8000/api/",
+  "service_url_prod": "https://asia-south1-tucfbclouddb.cloudfunctions.net/tuc_shop_node_api/api/",
+  "website": "https://talesofsuba.com",
+  "websitetitle": "TalesofSuBa",
+  "ytlivelink": "",
+  "logo": "",
+  "marriagedate": "06/05/2023",
+  "ytvideoId": "-JdTfeh4p7E",
+  "fromemail": "Tales of SuBa<talesofsuba@gmail.com>",
+  "subject": "RSVP for SuBa's Magical Ceremony - ",
+  "footerquote1": "<p>Our Eco-friendly <b>'Seed-Paper Wedding Invitations'</b> are Curated with ❤️ by seedballs.in 🌱</p>",
+  "footerquote2": "",
+  "adminpwd": "pappu",
+  "adminusername": "pappu"
+}

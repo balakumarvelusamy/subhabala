@@ -60,6 +60,8 @@ Version:        1.0.0
   src: url("../fonts/Donalia.eot?#iefix") format("embedded-opentype"), url("../fonts/Donalia.woff2") format("woff2"), url("../fonts/Donalia.woff") format("woff"), url("../fonts/Donalia.ttf") format("truetype");
 }
 
+
+
 /* 1.1	Theme Reset Style */
 html {
   font-size: 15px;
@@ -4562,7 +4564,8 @@ img {
 .wpo-hero-style-3 .wedding-announcement .couple-text {
   width: 100%;
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: bottom !important;
+  padding-bottom: 20px;
 }
 
 .wpo-hero-style-3 .wedding-announcement .couple-text h2 {
@@ -5557,11 +5560,11 @@ img {
 
 /* 3.3 wpo-video-section*/
 .wpo-video-section {
-  position: relative;
+  /* position: relative; */
   z-index: 1;
-  background: url(../images/cta.jpg) no-repeat center center;
+  /* background: url(../images/meu.png) no-repeat center center;
   height: 400px;
-  background-attachment: fixed;
+  background-attachment: fixed; */
 }
 
 @media (min-width: 1600px) {
@@ -6839,7 +6842,7 @@ img {
   width: 100%;
   height: 430px;
   content: "";
-  background: rgba(197, 144, 151, 0.8);
+  background: #198754 !important;
   z-index: -1;
 }
 
