@@ -116,7 +116,7 @@ const Footer = (props) => {
       </div>
       <div className="wpo-lower-footer border-top ">
         <div className="container ">
-          <div className="row bg-primary-suba">
+          <div className="row ">
             <div className="col col-xs-12">
               <p className="copyright ">
                 {" "}
