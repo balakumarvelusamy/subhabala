@@ -13,6 +13,9 @@ code {
 .text-primary-suba {
   color: #4bb878 !important;
 }
+.bg-primary-suba {
+  background-color: #4bb878 !important;
+}
 .messonry-button button {
   background-color: transparent;
   border: 0;

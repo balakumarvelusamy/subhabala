@@ -46,7 +46,7 @@ const LocationMap = ({ maxWidth, button, buttonClass }) => {
 
   return (
     <Fragment>
-      <Button className={`btn ${buttonClass}`} onClick={handleClickOpen}>
+      <Button className={`btn bg-primary-suba text-white ${buttonClass}`} onClick={handleClickOpen}>
         {button}
         See Location
       </Button>
