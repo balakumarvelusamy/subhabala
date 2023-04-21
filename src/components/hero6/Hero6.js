@@ -43,7 +43,7 @@ const Hero6 = (props) => {
           ) : currentdate < marriagedate ? (
             <>
               {" "}
-              <p>WE ARE GETTING MARRIED JUNE 5, 2023</p>
+              <p>WE ARE GETTING MARRIED ON JUNE 5, 2023</p>
               <div className="wpo-wedding-date">
                 <div className="clock-grids">
                   <TimeCountDown />
