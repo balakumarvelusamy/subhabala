@@ -44,11 +44,12 @@ const Hero6 = (props) => {
             <>
               {" "}
               <p>WE ARE GETTING MARRIED ON JUNE 5, 2023</p>
-              <span className="tssmall text-white">{config.prefix}</span>
               <div className="wpo-wedding-date">
                 <div className="clock-grids">
                   <TimeCountDown />
                 </div>
+                <br />
+                <span className="tssmall text-white">{config.prefix}</span>
               </div>
             </>
           ) : currentdate > marriagedatemmddyyyy ? (
