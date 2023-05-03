@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import invite from "../../images/hero/invite.png";
+import invite1 from "../../images/hero/invite.gif";
 const Header = (props) => {
   const ClickHandler = () => {
     window.scrollTo(10, 0);
@@ -164,7 +165,7 @@ const Header = (props) => {
                     <span className="text"> Invitation & RSVP</span>{" "}
                     <span className="mobile">
                       {/* <i className="fi flaticon-user"></i> */}
-                      <img src={invite} />
+                      <img height="auto" src={invite1} />
                     </span>
                   </NavLink>
                 </div>
