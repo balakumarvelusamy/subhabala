@@ -1919,7 +1919,7 @@ img {
     right: -10px;
   }
   .wpo-site-header .header-right .theme-btn, .wpo-site-header .header-right .view-cart-btn {
-    padding: 7px 13px;
+    padding: 7px 9px;
     font-size: 15px;
     border-radius: 5px;
   }
@@ -2096,7 +2096,7 @@ img {
 
 @media (max-width: 991px) {
   .wpo-site-header .header-right .theme-btn, .wpo-site-header .header-right .view-cart-btn {
-    padding: 7px 13px;
+    padding: 7px 9px;
     font-size: 15px;
   }
 }

@@ -3,7 +3,7 @@ import config from "../../config.json";
 const { useState, useEffect } = React;
 
 const TimeCountDown = () => {
-  const [countdownDate, setCountdownDate] = useState(new Date(config.marriagedate).getTime()); //mm/dd/yyyy
+  const [countdownDate, setCountdownDate] = useState(new Date(config.marriagedatemmddyyyy).getTime()); //mm/dd/yyyy
   const [state, setState] = useState({
     days: 0,
     hours: 0,

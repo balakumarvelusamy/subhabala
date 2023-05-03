@@ -8,7 +8,7 @@ import config from "../../config.json";
 const Hero6 = (props) => {
   var [currentdate, setDate] = useState(new Date().setHours(0, 0, 0, 0));
 
-  var marriagedate = new Date(config.marriagedate).setHours(0, 0, 0, 0);
+  var marriagedatemmddyyyy = new Date(config.marriagedatemmddyyyy).setHours(0, 0, 0, 0);
 
   // mm/dd/yyyy
 
@@ -32,7 +32,7 @@ const Hero6 = (props) => {
             Bala <span className="text-primary-suba">&</span> Subha
           </h2>
           {/* in use  bala */}
-          {marriagedate == currentdate ? (
+          {marriagedatemmddyyyy == currentdate ? (
             <>
               <h2>
                 {" "}
@@ -40,7 +40,7 @@ const Hero6 = (props) => {
                 Our Special Day has Arrived{" "}
               </h2>
             </>
-          ) : currentdate < marriagedate ? (
+          ) : currentdate < marriagedatemmddyyyy ? (
             <>
               {" "}
               <p>WE ARE GETTING MARRIED ON JUNE 5, 2023</p>
@@ -48,9 +48,11 @@ const Hero6 = (props) => {
                 <div className="clock-grids">
                   <TimeCountDown />
                 </div>
+                <br />
+                <span className="tssmall text-white">{config.prefix}</span>
               </div>
             </>
-          ) : (
+          ) : currentdate > marriagedatemmddyyyy ? (
             <>
               <br />
               <h2>
@@ -58,6 +60,8 @@ const Hero6 = (props) => {
                 We got married!!!{" "}
               </h2>
             </>
+          ) : (
+            <></>
           )}
         </div>
       </div>
