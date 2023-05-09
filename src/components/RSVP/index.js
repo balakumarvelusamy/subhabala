@@ -113,8 +113,8 @@ const RSVP = (props) => {
                 I will attend:
                 <select onBlur={(e) => changeHandler(e)} required onChange={(e) => changeHandler(e)} value={forms.meal} type="text" className="form-control" name="attend">
                   <option></option>
-                  <option value="Reception">Reception, July 4 7:00 PM</option>
-                  <option value="Marriage">Marriage, July 5 9:00 AM</option>
+                  <option value="Reception">Reception, June 4 7:00 PM</option>
+                  <option value="Marriage">Marriage, June 5 9:00 AM</option>
                   <option value="Both">Both</option>
                   <option value="No">Sorry, I can’t come.</option>
                 </select>
