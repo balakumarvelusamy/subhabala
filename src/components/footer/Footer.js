@@ -120,14 +120,16 @@ const Footer = (props) => {
             <div className="col col-xs-12">
               <p className="copyright ">
                 {" "}
-                &copy; 2023, Designed with 💚 by Subha & Bala.{" "}
-                <Link className="d-none" onClick={ClickHandler} to="https://instagram.com/theuniquecreations">
-                  <i>Contact: The Unique Creations</i>
-                </Link>
-                <br />
+                &copy; 2023, Designed with 💚 by Subha & Bala. <br />
               </p>
+              <Link className="" onClick={ClickHandler} to="https://theuniquecreations.com/contact">
+                <p className="small">
+                  Contact <b>www.theuniquecreations.com</b> for website development
+                </p>
+              </Link>
               <br />
-              <Link className="small text-dark" to="/admin">
+              <br />
+              <Link className="small text-dark d-none" to="/admin">
                 <i>Admin Log in</i>
               </Link>
             </div>
