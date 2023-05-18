@@ -116,7 +116,7 @@ const RSVP = (props) => {
                   <option value="Reception">Reception, June 4 7:00 PM</option>
                   <option value="Marriage">Marriage, June 5 9:00 AM</option>
                   <option value="Both">Both</option>
-                  <option value="No">Sorry, I can’t come.</option>
+                  <option value="No">Sorry, I can’t come, will join in Youtube Live Stream</option>
                 </select>
               </div>
 
