@@ -124,7 +124,7 @@ const Footer = (props) => {
               </p>
               <Link className="" onClick={ClickHandler} to="https://theuniquecreations.com/contact">
                 <p className="small">
-                  Contact <b>www.theuniquecreations.com</b> for website development
+                  Contact <b>www.theuniquecreations.com</b> for Digital Invitation/ Website development
                 </p>
               </Link>
               <br />

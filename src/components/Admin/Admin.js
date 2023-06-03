@@ -109,6 +109,12 @@ const Admin = (props) => {
         sort: "disabled",
         width: 150,
       },
+      {
+        label: "Email",
+        field: "email",
+        sort: "disabled",
+        width: 150,
+      },
 
       {
         label: "Attend/Guest",
@@ -147,6 +153,7 @@ const Admin = (props) => {
         <div className="row p-1">
           <SectionTitle MainTitle={"RSVP"} />
         </div>
+        <small className="small">{contact.length > 0 ? contact.map((user) => user.email + " ") + " ," : "No user Found"}</small>
         <div className="row">
           <div className="col col-xs-12 overflow-auto">
             <small className="overflow-auto">
