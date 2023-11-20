@@ -18,8 +18,8 @@ const TimeCountDown = () => {
   const setNewTime = () => {
     if (countdownDate) {
       const currentTime = new Date().getTime();
-
-      const distanceToDate = countdownDate - currentTime;
+      //change this to add the count down, added by bala suba to add the plus count down
+      const distanceToDate = currentTime - countdownDate;
 
       let days = Math.floor(distanceToDate / (1000 * 60 * 60 * 24));
       let hours = Math.floor((distanceToDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
