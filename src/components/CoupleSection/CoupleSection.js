@@ -42,7 +42,7 @@ const CoupleSection = (props) => {
                           {/* <li><Link to="/"><i className="ti-facebook"></i></Link></li>
                                                     <li><Link to="/"><i className="ti-twitter-alt"></i></Link></li> */}
                           <li>
-                            <Link target="_blank" to="https://www.instagram.com/theuniquecreations/">
+                            <Link target="_blank" to="https://www.instagram.com/theuniquecreations.it/">
                               <i className="ti-instagram"></i>
                             </Link>
                           </li>

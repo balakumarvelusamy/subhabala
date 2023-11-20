@@ -19,7 +19,7 @@ const Hero6 = (props) => {
           <div className="shape-1">
             <img src={shape1} alt="" />
           </div>
-          {config.ytlivelink ? (
+          {/* {config.ytlivelink ? (
             <div className="text-white video-btn ">
               <a target="_blank" href={config.ytlivelink}>
                 <i className="fi flaticon-play text-primary-suba" aria-hidden="true"></i>
@@ -27,7 +27,7 @@ const Hero6 = (props) => {
             </div>
           ) : (
             ""
-          )}
+          )} */}
           <h2>
             Bala <span className="text-primary-suba">&</span> Subha
           </h2>
@@ -55,10 +55,12 @@ const Hero6 = (props) => {
           ) : currentdate > marriagedatemmddyyyy ? (
             <>
               <br />
-              <h2>
-                Hurray, <br />
-                We got married!!!{" "}
-              </h2>
+              <p>Hurray, We got married on 05-June-2023 </p>
+              <div className="wpo-wedding-date">
+                <div className="clock-grids">
+                  <TimeCountDown marriage="true" />
+                </div>
+              </div>
             </>
           ) : (
             <></>
